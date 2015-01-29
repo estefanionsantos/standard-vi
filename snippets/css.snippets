@@ -1,0 +1,204 @@
+# CSS 
+# modified by: Estefanio NS <estefanions AT gmail DOT com>
+# ---------------------------------------------------------
+#
+# comment inline
+snippet **
+	/* ${1} */
+# comment block
+snippet **_
+	/*
+	  ${1}
+	*/
+snippet ***_ 
+
+
+
+	// ------------------------------------------------------------ 
+	/**
+	*
+	* ${1}
+	*
+	*/
+#
+#
+# @import
+snippet @i
+	@import url("${1}") ${2:all};
+#
+#
+# @media
+snippet @m
+	@media ${1:screen}
+	{
+		${2}
+	}
+#
+#
+# @media screen and ((min-width : 321px)
+snippet @mq
+	@media ${1:screen} and ($2)
+	{
+		${3}
+	}
+#
+#
+# webkit-based browsers
+snippet condicionalwebkit
+	@media screen and (-webkit-min-device-pixel-ratio:0) 
+	{  
+	/* 
+	 * CSS Statements that only apply 
+	 * on webkit-based browsers 
+	 * (Chrome, Safari, etc.)
+	 */  
+		${1}
+	}
+#
+#
+# round edge
+snippet border_radius
+	-webkit-border-radius: ${1:6}px;
+	-moz-border-radius: $1px;
+	border-radius: $1px;
+#
+#
+# round edge at the top
+snippet border_radius_top
+	-webkit-border-top-left-radius: ${1:6}px;
+	-webkit-border-top-right-radius: $1px;
+	-moz-border-radius-topleft: $1px;
+	-moz-border-radius-topright: $1px;
+	border-top-left-radius: $1px;
+	border-top-right-radius: $1px;
+#
+#
+# round edge at the bottom
+snippet border_radius_bottom
+	-webkit-border-bottom-right-radius: ${1:6}px;
+	-webkit-border-bottom-left-radius: $1px;
+	-moz-border-radius-bottomright: $1px;
+	-moz-border-radius-bottomleft: $1px;
+	border-bottom-right-radius: $1px;
+	border-bottom-left-radius: $1px;
+#
+#
+# round edge at the right
+snippet border_radius_right
+	-webkit-border-top-right-radius: ${1:6}px;
+	-webkit-border-bottom-right-radius: $1px;
+	-moz-border-radius-topright: $1px;
+	-moz-border-radius-bottomright: $1px;
+	border-top-right-radius: $1px;
+	border-bottom-right-radius: $1px;
+#
+#
+# round edge at the left
+snippet border_radius_left
+	-webkit-border-top-left-radius: ${1:6}px;
+	-webkit-border-bottom-left-radius: $1px;
+	-moz-border-radius-topleft: $1px;
+	-moz-border-radius-bottomleft: $1px;
+	border-top-left-radius: $1px;
+	border-bottom-left-radius: $1px;
+#
+#
+# shadow inner
+snippet shadow_inner	
+	moz-box-shadow: inset 2px 0 4px #000;  
+	-webkit-box-shadow: inset 2px 0 4px #000;  
+	box-shadow: inset 2px 0 4px #000;  
+#
+#
+# shadow outerr
+snippet shadow_outer
+	-webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);  
+	-moz-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52);  
+	box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.52); 
+#
+#
+# anchor link Pseudo class
+snippet anchor_link
+	a:link{ color: ${1:#09c} }
+	a:visited { color: ${2:#ffc} }
+	a:hover { color: ${3:#c00} }
+	a:active { color: ${4:#060} }
+#
+#
+# Cross-Browser Transparency
+snippet alpha
+	filter: alpha(opacity=${1:5}0); /* internet explorer */  
+	-khtml-opacity: 0.$1;      /* khtml, old safari */  
+	-moz-opacity: 0.$1;       /* mozilla, netscape */  
+	opacity: 0.$1;           /* fx, safari, opera */
+#
+#
+# Genareal Media Queries
+snippet general_media_queries
+	/** Smartphones (portrait and landscape) ----------- */  
+	@media only screen and (min-device-width : 320px) and (max-device-width : 480px) 
+	{  
+		/* Styles */  
+	}  
+
+	/** Smartphones (landscape) ----------- */  
+	@media only screen and (min-width : 321px) 
+	{  
+		/* Styles */  
+	}  
+
+	/** Smartphones (portrait) ----------- */  
+	@media only screen and (max-width : 320px) 
+	{  
+		/* Styles */  
+	}  
+
+	/** iPads (portrait and landscape) ----------- */  
+	@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) 
+	{  
+		/* Styles */  
+	}  
+
+	/** iPads (landscape) ----------- */  
+	@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) 
+	{  
+		/* Styles */  
+	}  
+
+	/** iPads (portrait) ----------- */  
+	@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) 
+	{  
+		/* Styles */  
+	}  
+
+	/** Desktops and laptops ----------- */  
+	@media only screen and (min-width : 1224px) 
+	{  
+		/* Styles */  
+	}  
+
+	/** Large screens ----------- */  
+	@media only screen and (min-width : 1824px) 
+	{  
+		/* Styles */  
+	}  
+
+	/** iPhone 4 ----------- */  
+	@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-device-pixel-ratio:1.5) 
+	{  
+		/* Styles */  
+	} 
+
+
+snippet @mediamax 
+		@media (max-width: ${1:800px}) {
+
+		${2}
+
+		}
+
+#
+#
+#
+# file: css.snippet
+#

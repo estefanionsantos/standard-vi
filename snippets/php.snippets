@@ -1,0 +1,808 @@
+# PHP 
+# modified by: Estefanio NS <estefanions AT gmail DOT com>
+# ---------------------------------------------------------
+#
+# comment inline
+snippet ** 
+	/** ${1} */
+# comment block
+snippet *** 
+	/**
+	 ${1}
+	*/
+# comment for method
+snippet **_
+
+	// ------------------------------------------------------------ 
+	/**
+	*
+	* ${1}
+	*
+	*/
+# <?php echo ?>	
+snippet phpe
+	<?php echo ${1}; ?>
+# <?php 
+#      echo
+# ?>	
+snippet phpee
+	<?php 
+		echo ${1};
+	?>
+# echo  
+snippet e
+	echo ${1};
+# <?php ?>	
+snippet php
+	<?php ${1} ?>
+# php opening tag with line break	
+snippet phpp
+	<?php
+		${1}
+	?>
+# <?php
+snippet phpo
+	<?php${1}
+# <?php
+snippet phpoo
+	<?php
+	
+	${1}
+
+
+# clone ?>
+snippet phpc
+	${1}?>
+# 
+#
+#?>
+snippet phpcc
+	${1}
+	
+	?>
+snippet print_r
+	print_r(${1:$array});
+snippet var_dump
+	var_dump(${1:var});
+# retorna print_r() ou var_dump()
+snippet pr 
+	echo '<pre>';
+	print_r(${1:$array});
+	echo '</pre>';
+snippet vd
+	echo '<pre>';
+	var_dump(${1});
+	echo '</pre>';
+snippet debug print_r()
+	echo '<pre>';
+	print_r(${1:$array});
+	echo '</pre>';
+snippet debug var_dump()	
+	echo '<pre>';
+	var_dump(${1});
+	echo '</pre>';
+# error_reporting()	
+snippet err_reporting
+		error_reporting(E_ALL);
+		ini_set('error_reporting', E_ALL);
+## try{...}catch(...){..}
+snippet try
+	try
+	{
+
+		${1}
+
+	}
+	catch (${2:Exception $e})
+	{
+
+		throw new ${3:Exception}(${4:$e});
+
+	}
+
+### throw new Exceptio(...)
+snippet throw
+	throw new ${1:Exception}(${2});
+####
+# modified
+snippet class 
+	class ${1:`Filename()`}
+	{
+		${2}
+	}	
+
+
+#
+snippet classe
+	class ${1:`Filename()`} extends ${2:ExtendClass}
+	{
+				${3}
+	}
+
+#
+snippet classei
+	class ${1:`Filename()`} extends ${2:ExtendClass}
+	implements ${3:InterfaceClass}
+	{
+		${4}
+	}
+
+#
+snippet classii
+	class ${1:`Filename()`} implements ${2:InterfaceClass}
+	{
+		${3}
+	}
+
+
+#
+snippet classa
+	abstract class ${1:`Filename()`}
+	{
+		${2}
+	}
+
+
+# Interface
+snippet classi
+	interface ${1:`Filename()`}
+	{
+		${2}
+	}
+
+# Interface
+snippet interface
+	interface ${1:`Filename()`}
+	{
+		${2}
+	}
+
+#
+snippet class_ class MyClass{}
+	class ${1:`Filename()`}
+	{
+		${2}
+	}
+#	
+snippet class_ class MyClass extends ExtendClass{}
+	class ${1:`Filename()`} extends ${2:ExtendClass}
+	{
+		${3}
+	} 
+
+
+#
+snippet class_ MyClass extends ExtendClass implements InterfaceClass{}
+	class ${1:`Filename()`} extends ${2:ExtendClass}
+	implements ${3:InterfaceClass}
+	{
+		${4}
+	}
+
+#
+snippet class_ class MyClass implements InterfaceClass
+	class ${1:`Filename()`} implements ${2:InterfaceClass}
+	{
+		${3}
+	}
+
+
+#
+snippet class_ abstract class MyClass{}
+	abstract class ${1:`Filename()`}
+	{
+		${2}
+	}
+
+
+
+# php header tag with
+snippet phpfile
+	<?php
+	
+	/**
+	 *
+	 * ${1}
+	 *
+	 * @author      ${2:`g:snips_author`}
+	 * @copyright   Copyright (c) `strftime('%Y')`, ${3:`g:snips_copyright_author`}
+	 *
+	 */
+
+	// --------------------------------------------------------------------
+
+	${4}
+
+
+# document file
+snippet docfile
+	
+	/**
+	 *
+	 * ${1}
+	 *
+	 * @author      ${2:`g:snips_author`}
+	 * @copyright   Copyright (c) `strftime('%Y')`, ${3:`g:snips_copyright_author`}
+	 *
+	 */
+
+	// --------------------------------------------------------------------
+
+	${4}
+
+
+
+# php header tag with
+snippet phpf
+	<?php
+	
+	/**
+	 *
+	 * ${1}
+	 *
+	 * @author      ${2:`g:snips_author`}
+	 * @copyright   Copyright (c) `strftime('%Y')`, ${3:`g:snips_copyright_author`}
+	 *
+	 */
+
+	// --------------------------------------------------------------------
+
+	${4}
+
+
+# document file
+snippet docf
+	
+	/**
+	 *
+	 * ${1}
+	 *
+	 * @author      ${2:`g:snips_author`}
+	 * @copyright   Copyright (c) `strftime('%Y')`, ${3:`g:snips_copyright_author`}
+	 *
+	 */
+
+	// --------------------------------------------------------------------
+
+	${4}
+
+
+snippet exit
+	exit(${1});
+# function	
+snippet function
+	if(!function_exists('${1:nameFunction}')) 
+	{
+		function $1(${2})
+		{
+			${3}
+		}
+	}
+
+
+# method
+snippet method
+	${1:public} function ${2:nameMethod}(${3})
+	{
+		${4}
+	} 
+# attr
+snippet vr 
+	var $${1:name};${2}
+snippet vp
+	public $${1:name};${2}
+snippet vv
+	private $_${1:name};${2}
+snippet vt
+	protected $_${1:name};${2}
+# [m]ethod _[c]onstruct
+snippet mc
+	${1:public} function __construct(${2})
+	{
+		${3}
+	}
+# [m]ethod _[c]onstruct [p]arent
+snippet mcp 
+	${1:public} function __construct(${2})
+	{
+		parent::__construct(${3});
+		${4}
+	}
+
+# [m]ethod
+snippet m
+	${1:public} function ${2:nameMethod}(${3})
+	{
+		${4}
+	} 
+
+# [m]ethod [p]ublic
+snippet mp
+	public function ${1:nameMethod}(${2})
+	{
+		${3}
+	} 
+
+# [m]ethod pri[v]ate
+snippet mv
+	private function _${1:nameMethod}(${2})
+	{
+		${3}
+	} 
+
+# [m]ethod pro[t]ected
+snippet mt
+	protected function _${1:nameMethod}(${2})
+	{
+		${3}
+	} 
+#---------
+# [m]ethod [s]tatic
+snippet ms
+	${1:public} static function ${2:nameMethod}(${3})
+	{
+		${4}
+	} 
+
+# [m]ethod [p]ublic [s]tatic
+snippet mps
+	public static function ${1:nameMethod}(${2})
+	{
+		${3}
+	} 
+
+# [m]ethod priva[t]e [s]tatic
+snippet mvs
+	private static function _${1:nameMethod}(${2})
+	{
+		${3}
+	} 
+
+# [m]ethod pro[t]ected [s]tatic
+snippet mts
+	protected static function _${1:nameMethod}(${2})
+	{
+		${3}
+	} 
+
+#---------
+# [m]ethod [i]nterface
+snippet mi
+	public function ${1:nameMethod}(${2});
+# [m]ethod [a]bstract
+snippet ma
+	protected abstract function ${1:nameMethod}(${2});
+# [m]ethod [g]ets [s]ets	
+snippet mgs
+	public function get${1:Name}()
+	{
+		return $this->${2:name};
+	}
+
+	public function set$1(${3:$name})
+	{
+		$this->$2 = ${4:$3};
+		return $this;
+	}
+
+
+
+	${5}
+# _[m]ethod [g]ets [s]ets	
+snippet _mgs
+	${1:private} function _get${2:Name}()
+	{
+		return $this->${3:name};
+	}
+
+	${4:$1} function _set$2(${5:$name})
+	{
+		$this->$3 = ${6:$5};
+		return $this;
+	}
+
+
+
+	${7}
+# [m]ethod [get] [set]	
+snippet mgetset
+	public function get${1:Name}()
+	{
+		return $this->${2:name};
+	}
+
+	public function set$1(${3:$name})
+	{
+		$this->$2 = ${4:$3};
+		return $this;
+	}
+
+
+
+	${5}
+# _[m]ethod [get] [set]	
+snippet _mgetset
+	${1:private} function _get${2:Name}()
+	{
+		return $this->${3:name};
+	}
+
+	${4:$1} function _set$2(${5:$name})
+	{
+		$this->$3 = ${6:$5};
+		return $this;
+	}
+
+
+
+	${7}
+# [m]ethod [get]
+snippet mget
+	public function get${1:Name}()
+	{
+		return $this->${2:name};
+	}
+
+	${3}
+
+
+# [m]ethod [set]
+snippet mset
+	public function set${1:Name}(${2:$name})
+	{
+		$this->${3:name} = $2;
+		return $this;
+	}
+
+	${4}
+
+# _[m]ethod [get]
+snippet _mget
+	${1:private} function _get${2:Name}()
+	{
+		return $this->${3:name};
+	}
+
+	${4}
+
+
+# _[m]ethod [set]
+snippet _mset
+	${1:private} function _set${2:Name}(${3:$name})
+	{
+		$this->${4:name} = $3;
+		return $this;
+	}
+
+	${5}
+
+#
+#
+#
+#
+# [n]ame[s]pace
+snippet ns
+	namespace ${1:Project};
+# namespace
+snippet namespace
+	namespace ${1:Project};
+# namespace
+snippet ns2
+	namespace ${1:Project}
+	{
+		${2}	
+	}
+# namespace
+snippet namespace2
+	namespace ${1:Project}
+	{
+		${2}	
+	}
+#	
+snippet nsclass
+	namespace ${1:Project};
+	${2}
+		class ${3:`Filename()`}
+		{
+				${4}
+		}
+
+
+# namespace class	
+snippet nsclasse
+	namespace ${1:Project};
+	${2}
+		class ${3:`Filename()`} extends ${4:ExtendClass}
+		{
+				${5}
+		}
+
+
+# namespace class	
+snippet nsclassi
+	namespace ${1:Project};
+	${2}
+		class ${3:`Filename()`} implements ${4:InterfaceClass}
+		{
+				${5}
+		}
+
+
+
+# namespace class	
+snippet nsclassei
+	namespace ${1:Project};
+	${2}
+		class ${3:`Filename()`} extends ${4:ExtendClass}
+		implements ${5:InterfaceClass}
+		{
+				${6}
+		}
+
+
+
+# namespace class	
+snippet nsclassa
+	namespace ${1:Project};
+	${2}
+	abstract class ${3:`Filename()`}
+	{
+		${4}
+	}
+
+# namespace class	
+snippet _nsclass namespace|Class
+	namespace ${1:Project};
+	${2}
+		class ${3:`Filename()`}
+		{
+				${4}
+		}
+
+# namespace class	
+snippet _nsclass namespace|Class|Extends
+	namespace ${1:Project};
+	${2}
+		class ${3:`Filename()`} extends ${4:ExtendClass}
+		{
+				${5}
+		}
+
+
+# namespace class	
+snippet _nsclass namespace|Class|Implements
+	namespace ${1:Project};
+	${2}
+		class ${3:`Filename()`} implements ${4:InterfaceClass}
+		{
+				${5}
+		}
+
+
+
+# namespace class	
+snippet _nsclass namespace|Class|Extends|Implements
+	namespace ${1:Project};
+	${2}
+		class ${3:`Filename()`} extends ${4:ExtendClass}
+		implements ${5:InterfaceClass}
+		{
+				${6}
+		}
+
+
+
+# namespace class	
+snippet _nsclass namespace|abstrac Class
+	namespace ${1:Project};
+	${2}
+	abstract class ${3:`Filename()`}
+	{
+		${4}
+	}
+
+
+# use
+snippet use
+	use ${1:Project};
+#
+# ---------------------------------------------------
+#
+# the following are old ones
+#
+#
+snippet inc
+	include '${1:file}';
+	${2}
+#
+snippet oinc
+	include_once '${1:file}';
+	${2}
+#
+snippet req
+	require '${1:file}';
+	${2}
+#
+snippet oreq
+	require_once '${1:file}';
+	${2}
+#
+# $GLOBALS['...']
+snippet globals
+	$GLOBALS['${1:variable}']${2: = }${3:something}${4:;}${5}
+#
+snippet $_ POST['...']
+	$_POST['${1:variable}']${2}
+#
+snippet $_ GET['...']
+	$_GET['${1:variable}']${2}
+#
+snippet $_ FILES['...']
+	$_FILES['${1:variable}']${2}
+#
+snippet $_ SESSION['...']
+	$_SESSION['${1:variable}']${2}
+#
+snippet $_ COOKIE['...']
+	$_COOKIE['${1:variable}']${2}
+#
+snippet $_ REQUEST['...']
+	$_REQUEST['${1:variable}']${2}
+#
+snippet $_ ENV['...']
+	$_ENV['${1:variable}']${2}
+#
+snippet $_ SERVER['...']
+	$_SERVER['${1:variable}']${2}
+#
+# define(...)
+snippet def
+	define('${1}', ${2});
+# define(...)
+snippet define
+	define('${1}', ${2});
+# defined(...)
+snippet def?
+	${1}defined('${2}')${3}
+# defined(...)
+snippet defined
+	${1}defined('${2}')${3}
+#
+snippet wh
+	while (${1:TRUE})
+	{
+		${2:// statement}
+	}
+#
+snippet ?wh
+	<php 
+		while (${1:TRUE})
+		{
+	?>
+				${2}
+	<?php
+		}
+	?>
+#
+# do ... while
+snippet do
+	do
+	{
+		${2}
+	}
+	while (${1:TRUE});
+#
+snippet ?do
+	<?php 
+		do {
+	?>
+		${2}
+	<?php 
+		}
+		while (${1:TRUE});
+	?>
+#
+snippet if
+	if (${1:TRUE})
+	{
+		${2}
+	}
+#
+snippet ?if
+	<?php
+		if (${1:TRUE})
+		{
+	?>
+		${2}
+	<?php
+		}
+	?>
+#
+snippet ife
+	if (${1})
+	{
+		${2}
+	}
+	else
+	{
+		${3}
+	}
+	${4}
+#
+snippet else
+	else
+	{
+		${1}
+	}
+#
+snippet elseif
+	elseif (${1:TRUE})
+	{
+		${2}
+	}
+#
+# Tertiary conditional
+snippet t
+	$${1:retVal} = (${2:TRUE}) ? ${3:a} : ${4:b};${5}
+#
+snippet switch
+	switch ($${1:variable})
+	{
+		case ${2:value}:
+			${3:// statement}
+			break;
+		${5}
+		default:
+			${4:// statement}
+			break;
+	}
+#
+snippet case
+	case ${1:value}:
+		${2:// statement}
+		break;${3}
+#
+snippet for
+	for ($${1:i} = ${2:0}; $$1 ${3:<} ${4:count}; $$1${5:++})
+	{
+		${6}
+	}	
+#
+snippet foreach
+	foreach ($${1:list} as $${2:row})
+	{
+		${3}
+	}
+
+#
+# while	
+snippet while
+	while (${1:TRUE})
+	{
+		${2}
+	}
+	
+# array (...)
+snippet arr
+	 array(${1});
+snippet arr_
+	 array
+	 (
+				${1}
+	 );
+#
+snippet kv
+		${1:key} => ${2:value}
+#
+snippet kvv
+		${1:key} => '${2:value}'
+#
+snippet kkv
+		'${1:key}' => ${2:value}
+#
+snippet kkvv
+		'${1:key}' => '${2:value}'
+#
+#
+# file: php.snippet
+#
