@@ -404,6 +404,22 @@ snippet _mgs
 
 
 	${7}
+# [m]ethod [g]ets [s]ets_	
+snippet mgs_
+	${1:private} function _get${2:Name}()
+	{
+		return $this->${3:name};
+	}
+
+	${4:$1} function _set$2(${5:$name})
+	{
+		$this->$3 = ${6:$5};
+		return $this;
+	}
+
+
+
+	${7}
 # [m]ethod [get] [set]	
 snippet mgetset
 	public function get${1:Name}()
@@ -422,6 +438,22 @@ snippet mgetset
 	${5}
 # _[m]ethod [get] [set]	
 snippet _mgetset
+	${1:private} function _get${2:Name}()
+	{
+		return $this->${3:name};
+	}
+
+	${4:$1} function _set$2(${5:$name})
+	{
+		$this->$3 = ${6:$5};
+		return $this;
+	}
+
+
+
+	${7}
+# [m]ethod [get] [set]_	
+snippet mgetset_
 	${1:private} function _get${2:Name}()
 	{
 		return $this->${3:name};
@@ -466,8 +498,28 @@ snippet _mget
 	${4}
 
 
+# [m]ethod [get]_
+snippet mget_
+	${1:private} function _get${2:Name}()
+	{
+		return $this->${3:name};
+	}
+
+	${4}
+
+
 # _[m]ethod [set]
 snippet _mset
+	${1:private} function _set${2:Name}(${3:$name})
+	{
+		$this->${4:name} = $3;
+		return $this;
+	}
+
+	${5}
+
+# [m]ethod [set]_
+snippet mset_
 	${1:private} function _set${2:Name}(${3:$name})
 	{
 		$this->${4:name} = $3;
