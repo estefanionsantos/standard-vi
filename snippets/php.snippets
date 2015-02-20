@@ -87,14 +87,11 @@ snippet err_reporting
 		ini_set('error_reporting', E_ALL);
 ## try{...}catch(...){..}
 snippet try
-	try
-	{
+	try {
 
 		${1}
 
-	}
-	catch (${2:Exception $e})
-	{
+	} catch (${2:Exception $e}) {
 
 		throw new ${3:Exception}(${4:$e});
 
