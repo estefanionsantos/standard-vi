@@ -264,6 +264,22 @@ snippet htmlfile
 		${4}
 	</body>
 	</html>
+## HTML File
+snippet htmlf
+	<!DOCTYPE HTML>
+	<html lang="${1:pt-br}">
+	    <head>
+	        <meta charset="${2:UTF-8}"/>
+	        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<!--[if lt IE 9]>
+						<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+				<![endif]-->
+		<title>${3:`Filename()`}</title>
+	    </head>
+	<body>
+		${4}
+	</body>
+	</html>
 #
 snippet html
 	<html>

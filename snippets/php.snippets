@@ -36,30 +36,12 @@ snippet e
 snippet php
 	<?php ${1} ?>
 # php opening tag with line break	
-snippet phpp
-	<?php
-		${1}
-	?>
-# <?php
 snippet phpo
 	<?php${1}
-# <?php
-snippet phpoo
-	<?php
-	
-	${1}
-
-
 # clone ?>
 snippet phpc
 	${1}?>
 # 
-#
-#?>
-snippet phpcc
-	${1}
-	
-	?>
 snippet print_r
 	print_r(${1:$array});
 snippet var_dump
@@ -83,6 +65,10 @@ snippet debug var_dump()
 	echo '</pre>';
 # error_reporting()	
 snippet err_reporting
+		error_reporting(E_ALL);
+		ini_set('error_reporting', E_ALL);
+# error_reporting()	
+snippet er
 		error_reporting(E_ALL);
 		ini_set('error_reporting', E_ALL);
 ## try{...}catch(...){..}
@@ -194,42 +180,6 @@ snippet class_ abstract class MyClass{}
 
 
 # php header tag with
-snippet phpfile
-	<?php
-	
-	/**
-	 *
-	 * ${1}
-	 *
-	 * @author      ${2:`g:snips_author`}
-	 * @copyright   Copyright (c) `strftime('%Y')`, ${3:`g:snips_copyright_author`}
-	 *
-	 */
-
-	// --------------------------------------------------------------------
-
-	${4}
-
-
-# document file
-snippet docfile
-	
-	/**
-	 *
-	 * ${1}
-	 *
-	 * @author      ${2:`g:snips_author`}
-	 * @copyright   Copyright (c) `strftime('%Y')`, ${3:`g:snips_copyright_author`}
-	 *
-	 */
-
-	// --------------------------------------------------------------------
-
-	${4}
-
-
-
-# php header tag with
 snippet phpf
 	<?php
 	
@@ -246,8 +196,7 @@ snippet phpf
 
 	${4}
 
-
-# document file
+# php header tag with
 snippet docf
 	
 	/**
@@ -262,6 +211,8 @@ snippet docf
 	// --------------------------------------------------------------------
 
 	${4}
+
+
 
 
 snippet exit
@@ -297,13 +248,13 @@ snippet vpro
 	protected $${1:name};
 	${2}
 # [m]ethod _[c]onstruct
-snippet mc
+snippet m__
 	${1:public} function __construct(${2})
 	{
 		${3}
 	}
 # [m]ethod _[c]onstruct [p]arent
-snippet mcp 
+snippet m__p 
 	${1:public} function __construct(${2})
 	{
 		parent::__construct(${3});
@@ -317,53 +268,11 @@ snippet m
 		${4}
 	} 
 
-# [m]ethod [p]ublic
-snippet mp
-	public function ${1:nameMethod}(${2})
-	{
-		${3}
-	} 
-
-# [m]ethod pri[v]ate
-snippet mv
-	private function _${1:nameMethod}(${2})
-	{
-		${3}
-	} 
-
-# [m]ethod pro[t]ected
-snippet mt
-	protected function _${1:nameMethod}(${2})
-	{
-		${3}
-	} 
-#---------
-# [m]ethod [s]tatic
+# [m]ethod
 snippet ms
 	${1:public} static function ${2:nameMethod}(${3})
 	{
 		${4}
-	} 
-
-# [m]ethod [p]ublic [s]tatic
-snippet mps
-	public static function ${1:nameMethod}(${2})
-	{
-		${3}
-	} 
-
-# [m]ethod priva[t]e [s]tatic
-snippet mvs
-	private static function _${1:nameMethod}(${2})
-	{
-		${3}
-	} 
-
-# [m]ethod pro[t]ected [s]tatic
-snippet mts
-	protected static function _${1:nameMethod}(${2})
-	{
-		${3}
 	} 
 
 #---------
@@ -389,22 +298,7 @@ snippet mgs
 
 
 	${5}
-# _[m]ethod [g]ets [s]ets	
-snippet _mgs
-	${1:private} function _get${2:Name}()
-	{
-		return $this->${3:name};
-	}
 
-	${4:$1} function _set$2(${5:$name})
-	{
-		$this->$3 = ${6:$5};
-		return $this;
-	}
-
-
-
-	${7}
 # [m]ethod [g]ets [s]ets_	
 snippet mgs_
 	${1:private} function _get${2:Name}()
@@ -437,22 +331,6 @@ snippet mgetset
 
 
 	${5}
-# _[m]ethod [get] [set]	
-snippet _mgetset
-	${1:private} function _get${2:Name}()
-	{
-		return $this->${3:name};
-	}
-
-	${4:$1} function _set$2(${5:$name})
-	{
-		$this->$3 = ${6:$5};
-		return $this;
-	}
-
-
-
-	${7}
 # [m]ethod [get] [set]_	
 snippet mgetset_
 	${1:private} function _get${2:Name}()
@@ -489,16 +367,6 @@ snippet mset
 
 	${4}
 
-# _[m]ethod [get]
-snippet _mget
-	${1:private} function _get${2:Name}()
-	{
-		return $this->${3:name};
-	}
-
-	${4}
-
-
 # [m]ethod [get]_
 snippet mget_
 	${1:private} function _get${2:Name}()
@@ -508,16 +376,6 @@ snippet mget_
 
 	${4}
 
-
-# _[m]ethod [set]
-snippet _mset
-	${1:private} function _set${2:Name}(${3:$name})
-	{
-		$this->${4:name} = $3;
-		return $this;
-	}
-
-	${5}
 
 # [m]ethod [set]_
 snippet mset_
