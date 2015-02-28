@@ -284,14 +284,18 @@ snippet method
 		${4}
 	} 
 # attr
-snippet vr 
-	var $${1:name};${2}
-snippet vp
-	public $${1:name};${2}
-snippet vv
-	private $_${1:name};${2}
-snippet vt
-	protected $_${1:name};${2}
+snippet vvar 
+	var $${1:name};
+	${2}
+snippet vpub
+	public $${1:name};
+	${2}
+snippet vpri
+	private $${1:name};
+	${2}
+snippet vpro
+	protected $${1:name};
+	${2}
 # [m]ethod _[c]onstruct
 snippet mc
 	${1:public} function __construct(${2})
