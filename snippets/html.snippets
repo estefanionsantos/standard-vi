@@ -198,16 +198,22 @@ snippet ttc
 # tag auto close
 snippet ttcc
 	<${1} />
-# Placehold:
-# image markup
-snippet placeholdimg
-	http://placehold.it/${1:250}x${2:150}.${3:png}/${4:09c}/${5:fff}/&text=${6:My+Image+:)}
+#
 #
 snippet dummyimg
 	http://dummyimage.com/${1:250}x${2:250}/${3:06c}/${4:fff}.${5:png}&text=${6:Dummy+Text}
 #
-snippet dummyimage
+#
+snippet imgdummy
 	http://dummyimage.com/${1:250}x${2:250}/${3:06c}/${4:fff}.${5:png}&text=${6:Dummy+Text}
+#	
+# Placehold:
+snippet placeholdimg
+	http://placehold.it/${1:250}x${2:150}.${3:png}/${4:09c}/${5:fff}/&text=${6:My+Image+:)}
+#	
+# Placehold:
+snippet imgplacehold
+	http://placehold.it/${1:250}x${2:150}.${3:png}/${4:09c}/${5:fff}/&text=${6:My+Image+:)}
 #	
 snippet lorempixel abstract
 	http://lorempixel.com/${1:250}/${2:250}/abstract/${3:1}/
@@ -593,12 +599,6 @@ snippet table_h
 	    <td>Engineer</td>
 	    <td>@john</td>
 	</tr>
-	<tr>
-		<td>2</td>
-	    <td>Mary</td>
-	    <td>Architect</td>
-	    <td>@mary</td>
-	</tr>
 	</tbody>
 	</table>
 #	
@@ -606,12 +606,6 @@ snippet table_v
 	<table border=1">${1}
 	<tr>
 		<th>Header 1</th>
-		<td>data</td>
-		<td>data</td>
-		<td>data</td>
-	</tr>
-	<tr>
-		<th>Header 2</th>
 		<td>data</td>
 		<td>data</td>
 		<td>data</td>
@@ -753,30 +747,6 @@ snippet img.
 snippet img#
 	<img id="${1}" src="${2:my-image.jpg}" alt="${3:My Image}"/>
 # http://placehold.it/${1:250}x${2:150}.${3:jpg}/${4:09c}/${5:fff}/&text=${6:My+Image+:)}
-#
-snippet aimgplacehold
-	<a href="${1:#}">
-		<img src="http://placehold.it/${2:250}x${3:150}.${4:jpg}/${5:09c}/${6:fff}/&text=${7:My+Image+:)}" alt="${8:My Image}" />
-	</a>	
-#
-snippet aimgplacehold.
-	<a class="${1}" href="${2:#}">
-		<img src="http://placehold.it/${3:250}x${4:150}.${5:jpg}/${6:09c}/${7:fff}/&text=${8:My+Image+:)}" alt="${9:My Image}" />
-	</a>	
-#
-snippet aimgplacehold#
-	<a id="${1}" href="${2:#}">
-		<img src="http://placehold.it/${3:250}x${4:150}.${5:jpg}/${6:09c}/${7:fff}/&text=${8:My+Image+:)}" alt="${9:My Image}" />
-	</a>	
-#
-snippet imgplacehold
-	<img src="http://placehold.it/${1:250}x${2:150}.${3:jpg}/${4:09c}/${5:fff}/&text=${6:My+Image+:)}" alt="${7:My Image}"/>
-#
-snippet imgplacehold.
-	<img class="${1}" src="http://placehold.it/${2:250}x${3:150}.${4:jpg}/${5:09c}/${6:fff}/&text=${7:My+Image+:)}" alt="${8:My Image}"/>
-#
-snippet imgplacehold#
-	<img id="${1}" src="http://placehold.it/${2:250}x${3:150}.${4:jpg}/${5:09c}/${6:fff}/&text=${7:My+Image+:)}" alt="${8:My Image}"/>
 #
 snippet i
 	<i>${1}</i>
