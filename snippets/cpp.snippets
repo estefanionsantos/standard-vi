@@ -1,14 +1,11 @@
+#
 # comment inline
-snippet **
-	/* ${1} */
+snippet */
+	/*${1}*/
+#
+#
 # comment block
-snippet **_
-	/*${1:*}
-	${2}
-	*/
-#
-#
-snippet *** 
+snippet **/ 
 	/*
 	* -------------------------------------------------
 	* ${1} 
@@ -16,6 +13,7 @@ snippet ***
 	* ${2} 
 	*
 	*/
+#
 # Read File Into Vector
 snippet readfile
 	std::vector<char> v;
