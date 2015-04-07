@@ -3,12 +3,49 @@
 # Global snippets
 #
 # modified by: Estefanio NS <estefanions AT gmail DOT com>
-#------------------------------------------------------
+# ----------------------------------------------------------
 #
 #
 # (c) holds no legal value ;)
 #
 #
+# comment block
+snippet --| 
+	|
+	| ------------------------------------------------------
+	| ${1} 
+	| ------------------------------------------------------
+	|
+	| ${2} 
+	|
+	|
+# comment inline for php, java, javascript	
+snippet **
+		/* ${1} */
+# comment for php, java, javascript
+snippet *** 
+	/*
+	*
+	* ------------------------------------------------------
+	* ${1} 
+	* ------------------------------------------------------
+	*
+	* ${2} 
+	*
+	*
+	*/
+# comment for php, ruby, python 
+snippet ### 
+	#
+	#
+	# ------------------------------------------------------
+	# ${1} 
+	# ------------------------------------------------------
+	#
+	# ${2} 
+	#
+	#
+	#
 snippet c)
 	`&enc[:2] == "utf" ? "©" : "(c)"` Copyright `strftime("%Y")` ${1:`g:snips_author`}. All Rights Reserved.${2}
 snippet date_
@@ -25,17 +62,17 @@ snippet n_
 		${1}
 
 # ()
-snippet )_
+snippet ))
 	(
 		${1}
 	)
 # {}		
-snippet }_
+snippet }}
 	{
 		${1}
 	}
 # []		
-snippet ]_
+snippet ]]
 	[
 		${1}
 	]
