@@ -182,6 +182,7 @@ set nowritebackup       " no write backup
 set mouse=a             " Enable mouse usage (all modes)
 set background=dark     " background
 set showcmd	            " Show (partial) command in status line.
+set ruler               " ruler
 "set autowrite	        " Automatically save before commands like :next and :make
 
 set cul
