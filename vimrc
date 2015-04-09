@@ -164,25 +164,25 @@ cab hlclear let @/=''
 " Highlight word under the cursor
 cab hlword let @/="<C-r><C-w>"
 
-set ai              "  auto-identacao (set autoindent)
-set ci              "  gira em torno de C recuo stilo (set cindent)
-set expandtab       "  creates spaces instead of tab 
-set shiftwidth=4    "  creates 4 spaces in the tab 
-set tabstop=4       "  changes the width of tab 
-set sm              "  shows the beginning of a new closed block {},[], () (set showmatch)
-set nu              "  numbered lines (set number)
-set is              "  increases search (set incrementedsearch)
-set hls             "  Highlight search (set higlightedsearch)
-set is              "  ignores case sensitive (set ignorecase)
-set scs             "  considers uppercase of lowercase (set smartcase )
-set hidden          "  Hide buffers when they are abandoned
-set nobackup
-set noswapfile
-set nowritebackup
-set mouse=a         " Enable mouse usage (all modes)
-set background=dark
-set showcmd	        " Show (partial) command in status line.
-"set autowrite	     " Automatically save before commands like :next and :make
+set ai                  " auto-identacao (set autoindent)
+set ci                  " gira em torno de C recuo stilo (set cindent)
+set expandtab           " creates spaces instead of tab 
+set shiftwidth=4        " creates 4 spaces in the tab 
+set tabstop=4           " changes the width of tab 
+set sm                  " shows the beginning of a new closed block {},[], () (set showmatch)
+set nu                  " numbered lines (set number)
+set is                  " increases search (set incrementedsearch)
+set hls                 " Highlight search (set higlightedsearch)
+set is                  " ignores case sensitive (set ignorecase)
+set scs                 " considers uppercase of lowercase (set smartcase )
+set hidden              " Hide buffers when they are abandoned
+set nobackup            " no backup
+set noswapfile          " no swap file
+set nowritebackup       " no write backup
+set mouse=a             " Enable mouse usage (all modes)
+set background=dark     " background
+set showcmd	            " Show (partial) command in status line.
+"set autowrite	        " Automatically save before commands like :next and :make
 
 set cul
 hi cursorline cterm=NONE ctermbg=black guibg=dargray
