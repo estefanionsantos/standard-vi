@@ -29,7 +29,10 @@ autocmd FileType cpp        setlocal omnifunc=omni#cpp#complete#Main
 autocmd FileType hpp        setlocal omnifunc=omni#cpp#complete#Main
 autocmd FileType ruby       setlocal omnifunc=rubycomplete#Complete
 "au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
-"
+
+" build tags of your own project with Ctrl-F12
+map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
 "autocmd BufRead *.* norm zR
 
 set completeopt=longest,menuone
