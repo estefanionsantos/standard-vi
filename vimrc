@@ -51,6 +51,24 @@ let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 
 set completeopt=longest,menuone
 
+
+" Enable Spell Checking
+set spell
+" +--------------------------------------------------------------------+
+" |               using spell check                                    |
+" +------+-------------------------------------------------------------+
+" | ]s   | Moves to the next misspelled word                           |
+" ----------------------------------------------------------------------
+" | [s   | Moves to the previous misspelled word                       |
+" ----------------------------------------------------------------------
+" | z=   | Brings up the list of spelling options (possible spellings) |
+" ----------------------------------------------------------------------
+" | zg   | Adds a word to the dictionary                               |
+" ----------------------------------------------------------------------
+" | zug  | Removes a (undo) the addition of a word to the dictionary   |
+" ----------------------------------------------------------------------
+
+
 let php_sql_query=1
 let php_htmlInStrings=1
 
