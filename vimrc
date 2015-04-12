@@ -28,8 +28,6 @@ autocmd FileType c          setlocal omnifunc=ccomplete#Complete
 autocmd FileType cpp        setlocal omnifunc=omni#cpp#complete#Main
 autocmd FileType hpp        setlocal omnifunc=omni#cpp#complete#Main
 autocmd FileType ruby       setlocal omnifunc=rubycomplete#Complete
-autocmd FileType html       setlocal shiftwidth=2 tabstop=2
-autocmd FileType python     setlocal expandtab shiftwidth=4 softtabstop=4
 "au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 "
 "autocmd BufRead *.* norm zR
