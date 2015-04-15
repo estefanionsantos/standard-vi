@@ -28,7 +28,7 @@ autocmd FileType c          setlocal omnifunc=ccomplete#Complete
 autocmd FileType cpp        setlocal omnifunc=omni#cpp#complete#Main
 autocmd FileType hpp        setlocal omnifunc=omni#cpp#complete#Main
 autocmd FileType ruby       setlocal omnifunc=rubycomplete#Complete
-"au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
+
 
 " build tags of your own project with Ctrl-F12
 map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
@@ -47,13 +47,8 @@ let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 
 
 
-"autocmd BufRead *.* norm zR
-
-set completeopt=longest,menuone
-
-
 " Enable Spell Checking
-set spell
+"set spell
 " +--------------------------------------------------------------------+
 " |               using spell check                                    |
 " +------+-------------------------------------------------------------+
@@ -67,6 +62,16 @@ set spell
 " ----------------------------------------------------------------------
 " | zug  | Removes a (undo) the addition of a word to the dictionary   |
 " ----------------------------------------------------------------------
+
+
+
+
+
+
+
+"autocmd BufRead *.* norm zR
+
+set completeopt=longest,menuone
 
 
 let php_sql_query=1
