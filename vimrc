@@ -189,9 +189,19 @@ cab WQALL wqall
 cab wQALL wqall
 cab Wqall wqall
 
+" -----------------------------
 "NERDTree
+" -----------------------------
+"
+" show NERDTree 
 cab ntree NERDTree
+
+" hide NERDTree
 cab ntreec NERDTreeClose
+
+" show / hide the NERDTree
+map ,n :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
 
 " TComment
 cab tcomment TComment
