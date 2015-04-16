@@ -189,20 +189,23 @@ cab WQALL wqall
 cab wQALL wqall
 cab Wqall wqall
 
-" -----------------------------
-"NERDTree
-" -----------------------------
-"
-" show NERDTree 
-cab ntree NERDTree
-
-" hide NERDTree
-cab ntreec NERDTreeClose
-
+" -------------------------------------------------
 " show/hide the NERDTree
+" -------------------------------------------------
+"
+cab ntree NERDTreeToggle | cab NTREE NERDTreeToggle
+cab Ntree NERDTreeToggle | cab nTREE NERDTreeToggle
+cab nerdTree NERDTreeToggle | cab NERDTREE NERDTreeToggle
+
 map ,n :NERDTreeToggle<CR>
 map <leader>n :NERDTreeToggle<CR>
 inoremap <leader>n <c-o>:NERDTreeToggle<CR>
+
+" 
+" -------------------------------------------------
+"
+
+
 
 " TComment
 cab tcomment TComment
