@@ -199,9 +199,10 @@ cab ntree NERDTree
 " hide NERDTree
 cab ntreec NERDTreeClose
 
-" show / hide the NERDTree
+" show/hide the NERDTree
 map ,n :NERDTreeToggle<CR>
 map <leader>n :NERDTreeToggle<CR>
+inoremap <leader>n <c-o>:NERDTreeToggle<CR>
 
 " TComment
 cab tcomment TComment
