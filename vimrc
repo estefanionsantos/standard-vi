@@ -178,6 +178,7 @@ cab WQALL wqall | cab wQALL wqall | cab Wqall wqall
 cab ntree NERDTreeToggle | cab NTREE NERDTreeToggle
 cab Ntree NERDTreeToggle | cab nTREE NERDTreeToggle
 cab nerdTree NERDTreeToggle | cab NERDTREE NERDTreeToggle
+cab nerdtree NERDTreeToggle
 
 map <leader>nt :NERDTreeToggle<CR>
 inoremap <leader>nt <c-o>:NERDTreeToggle<CR>
