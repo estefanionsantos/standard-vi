@@ -179,7 +179,6 @@ cab ntree NERDTreeToggle | cab NTREE NERDTreeToggle
 cab Ntree NERDTreeToggle | cab nTREE NERDTreeToggle
 cab nerdTree NERDTreeToggle | cab NERDTREE NERDTreeToggle
 
-map ,n :NERDTreeToggle<CR>
 map <leader>n :NERDTreeToggle<CR>
 inoremap <leader>n <c-o>:NERDTreeToggle<CR>
 
