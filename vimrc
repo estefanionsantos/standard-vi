@@ -163,21 +163,21 @@ map <A-F12> :b22<cr>
 map <C-Q> :bwipeout<cr>
 map <F5> :buffers<cr>
 
-cab W w | cab Q q | cab B b
-cab LS ls | cab Ls ls | cab lS ls
-cab BD bd | cab Bd bd | cab PWD pwd | cab Pwd pwd
-cab Wq wq | cab wQ wq | cab WQ wq | cab Wa wa | cab WA wa | cab wA wa
-cab WALL wall | cab Wall wall | cab wALL wall
-cab QALL qall | cab Qall qall | cab qALL qall
-cab WQALL wqall | cab wQALL wqall | cab Wqall wqall
+cab W w|cab Q q|cab B b
+cab LS ls|cab Ls ls|cab lS ls
+cab BD bd|cab Bd bd|cab PWD pwd|cab Pwd pwd
+cab Wq wq|cab wQ wq|cab WQ wq|cab Wa wa|cab WA wa|cab wA wa
+cab WALL wall|cab Wall wall|cab wALL wall
+cab QALL qall|cab Qall qall|cab qALL qall
+cab WQALL wqall|cab wQALL wqall|cab Wqall wqall
 
 " -------------------------------------------------
 " show/hide the NERDTree
 " -------------------------------------------------
 "
-cab ntree NERDTreeToggle | cab NTREE NERDTreeToggle
-cab Ntree NERDTreeToggle | cab nTREE NERDTreeToggle
-cab nerdTree NERDTreeToggle | cab NERDTREE NERDTreeToggle
+cab ntree NERDTreeToggle|cab NTREE NERDTreeToggle
+cab Ntree NERDTreeToggle|cab nTREE NERDTreeToggle
+cab nerdTree NERDTreeToggle|cab NERDTREE NERDTreeToggle
 cab nerdtree NERDTreeToggle
 
 map <leader>nt :NERDTreeToggle<CR>
