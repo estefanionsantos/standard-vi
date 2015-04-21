@@ -96,6 +96,7 @@ if has("autocmd")
 autocmd BufEnter *.phtml set syn=php    " Files found ZendFramework
 autocmd BufEnter *.ctp set syn=php      " Files found CackePHP
 autocmd BufRead,BufNewFile *.php set filetype=php.html
+autocmd BufRead,BufNewFile *.cpp set filetype=cpp.c
 
 endif
 
