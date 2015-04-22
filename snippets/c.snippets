@@ -70,16 +70,21 @@ snippet do
 	do {
 		${2:/* code */}
 	} while (${1:/* condition */});
-# While Loop
-snippet wh
-	while (${1:/* condition */}) {
-		${2:/* code */}
-	}
-# While Loop
+#
+# while	
 snippet while
-	while (${1:/* condition */}) {
-		${2:/* code */}
+	while (${1:TRUE})
+	{
+		${2}
 	}
+
+# while	
+snippet wh
+	while (${1:TRUE})
+	{
+		${2}
+	}
+
 # For Loop
 snippet for
 	for (${2:i} = 0; $2 < ${1:count}; $2${3:++}) {
