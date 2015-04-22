@@ -156,6 +156,24 @@ snippet .
 	[${1}]${2}
 snippet un
 	unsigned
+# switch
+snippet switch
+	switch ($${1:variable})
+	{
+		case ${2:value}:
+			${3:// statement}
+			break;
+		${5}
+		default:
+			${4:// statement}
+			break;
+	}
+#
+snippet case
+	case ${1:value}:
+		${2:// statement}
+		break;${3}
+#
 #
 #
 #
