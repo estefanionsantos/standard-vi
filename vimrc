@@ -101,11 +101,11 @@ autocmd BufRead,BufNewFile *.cpp set filetype=cpp.c
 endif
 
 
-inoremap ( ()<left>
-inoremap { {}<left>
-inoremap [ []<left>
-inoremap ' ''<left>
-inoremap " ""<left>
+"inoremap ( ()<left>
+"inoremap { {}<left>
+"inoremap [ []<left>
+"inoremap ' ''<left>
+"inoremap " ""<left>
 
 map <F10> :w!<cr>
 nmap <F12> :!ctags -R .<cr>
