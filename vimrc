@@ -127,11 +127,11 @@ let g:fuf_mrucmd_maxItem = 400
 
 nnoremap <Leader>f :FufFile<cr>
 nnoremap <Leader>b :FufBuffer<cr>
-nnoremap <Leader>t :FufTag<cr>
+"nnoremap <Leader>t :FufTag<cr>
 
 inoremap <leader>f <c-o>:FufFile<cr>
 inoremap <leader>b <c-o>:FufBuffer<cr>
-inoremap <leader>t <c-o>:FufTag<cr>
+"inoremap <leader>t <c-o>:FufTag<cr>
 
 map ,f :FufFile<cr>
 map ,b :FufBuffer<cr>
