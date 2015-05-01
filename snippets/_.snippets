@@ -9,6 +9,34 @@
 # (c) holds no legal value ;)
 #
 #
+#
+snippet =>
+	${1:key} => ${2:value}
+#
+snippet =>,
+	${1:key} => ${2:value},${3}
+#
+snippet :q
+	'${1:key}': '${2:value}'${3}
+#
+snippet :qq
+	"${1:key}": "${2:value}"${3}
+#
+snippet :q,
+	'${1:key}': '${2:value}', ${3}
+#
+snippet :qq,
+	"${1:key}": "${2:value}"${3}
+#		
+snippet $]
+	$${1:arr}[${2}]${3}
+#		
+snippet $]q
+	$${1:arr}['${2}']${3}
+#		
+snippet $]qq
+	$${1:arr}["${2}"]${3}
+#
 # comment block
 snippet --| 
 	|
