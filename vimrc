@@ -45,6 +45,8 @@ let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
 let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
 let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 
+let g:acp_ignorecaseOption = 0 " ignore Case 0|1
+let g:acp_enableAtStartup = 0 " auto popup 0|1
 
 
 " Enable Spell Checking
