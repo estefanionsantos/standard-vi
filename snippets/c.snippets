@@ -173,6 +173,13 @@ snippet case
 	case ${1:value}:
 		${2:// statement}
 		break;${3}
+		
+snippet win32
+	#ifdef WIN32
+		return 1;
+	#else
+	  return 0;
+	#endif
 #
 #
 #

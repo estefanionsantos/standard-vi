@@ -5,6 +5,7 @@ filetype on
 filetype plugin on
 filetype indent on
 
+let g:tabular_loaded = 1
 let php_special_vars = 0
 
 " set makeprg=php\ -1\ %
@@ -32,6 +33,8 @@ autocmd FileType ruby       setlocal omnifunc=rubycomplete#Complete
 
 " build tags of your own project with Ctrl-F12
 map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
+map ,u :source /etc/vim/vimrc<CR> " file vimrc recharged!"
 
 
 
@@ -231,7 +234,6 @@ nnoremap <leader>a= :Tabularize /=<CR>
 vnoremap <leader>a= :Tabularize /=<CR>
 nnoremap <leader>a: :Tabularize /:\zs<CR>
 vnoremap <leader>a: :Tabularize /:\zs<CR>
-let g:tabular_loaded = 1
 
 
              
