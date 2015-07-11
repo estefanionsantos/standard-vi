@@ -423,6 +423,23 @@ snippet pre#
 		${2}
 	</pre>
 #	
+#	
+snippet p
+	<p>
+		${1}
+	</p>
+#	
+snippet p.
+	<p class="${1}">
+		${2}
+	</p>
+#	
+snippet p#
+	<p id="${1}">
+		${2}
+	</p>
+#	
+snippet fieldset
 snippet fieldset
 	<fieldset>
 		${1}
@@ -996,78 +1013,126 @@ snippet cond
 #
 #
 snippet selection
-	<selection>${1}</selection>
+	<selection>
+		${1}
+	</selection>
 #
 snippet nav
-	<nav>${1}</nav>
+	<nav>
+		${1}
+	</nav>
 #
 snippet article
-	<article>${1}</article>
+	<article>
+		${1}
+	</article>
 #
 snippet aside
-	<aside>${1}</aside>
+	<aside>
+		${1}
+	 </aside>
 #
 snippet hgroup
-	<hgroup>${1}</hgroup>
+	<hgroup>
+		${1}
+	</hgroup>
 #
 snippet header
-	<header>${1}</header>
+	<header>
+		${1}
+	</header>
 #
 snippet footer
-	<footer>${1}</footer>
+	<footer>
+		${1}
+	</footer>
 #
 snippet main
-	<main>${1}</main>
+	<main>
+		${1}
+	</main>
 ### attr class
 #
 snippet selection.
-	<selection class="${1}">${2}</selection>
+	<selection class="${1}">
+		${2}
+	</selection>
 #
 snippet nav.
-	<nav class="${1}">${2}</nav>
+	<nav class="${1}">
+		${2}
+	</nav>
 #
 snippet article.
-	<article class="${1}">${2}</article>
+	<article class="${1}">
+		${2}
+	</article>
 #
 snippet aside.
-	<aside class="${1}">${2}</aside>
+	<aside class="${1}">
+		${2}
+	</aside>
 #
 snippet hgroup.
-	<hgroup class="${1}">${2}</hgroup>
+	<hgroup class="${1}">
+		${2}
+	</hgroup>
 #
 snippet header.
-	<header class="${1}">${2}</header>
+	<header class="${1}">
+		${2}
+	</header>
 #
 snippet footer.
-	<footer class="${1}">${2}</footer>
+	<footer class="${1}">
+		${2}
+	</footer>
 #
 snippet main.
-	<main class="${1}">${2}</main>
+	<main class="${1}">
+		${2}
+	</main>
 ### attr id
 #
 snippet selection#
-	<selection id="${1}">${2}</selection>
+	<selection id="${1}">
+		${2}
+	</selection>
 #
 snippet nav#
-	<nav id="${1}">${2}</nav>
+	<nav id="${1}">
+		${2}
+	</nav>
 #
 snippet article#
-	<article id="${1}">${2}</article>
+	<article id="${1}">
+		${2}
+	</article>
 #
 snippet aside#
-	<aside id="${1}">${2}</aside>
+	<aside id="${1}">
+		${2}
+	</aside>
 #
 snippet hgroup#
-	<hgroup id="${1}">${2}</hgroup>
+	<hgroup id="${1}">
+		${2}
+	</hgroup>
 #
 snippet header#
-	<header id="${1}">${2}</header>
+	<header id="${1}">
+		${2}
+	</header>
 #
 snippet footer#
-	<footer id="${1}">${2}</footer>
+	<footer id="${1}">
+		${2}
+	</footer>
 #
 snippet main#
-	<main id="${1}">${2}</main>
+	<main id="${1}">
+		${2}
+	</main>
 #
 #-----------------------------------------
 ### | Agrupando conteudo
@@ -1106,7 +1171,7 @@ snippet data
 	<data value=${1}>${2}</data>
 #
 snippet time
-	<time datetime="${1:2014-07-20}">${1:Jul 20}</time>
+	<time datetime="${1:2010-07-20}">${1:Jul 20}</time>
 #
 snippet mark
 	<mark>${1}</mark>
@@ -1150,7 +1215,7 @@ snippet data#
 	<data id="${1}" value=${2}>${3}</data>
 #
 snippet time#
-	<time id="${1}" datetime="${2:2014-07-20}">${3:Jul 20}</time>
+	<time id="${1}" datetime="${2:2015-07-20}">${3:Jul 20}</time>
 #
 snippet mark#
 	<mark id="${1}">${3}</mark>
