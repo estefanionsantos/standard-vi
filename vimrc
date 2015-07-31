@@ -94,6 +94,22 @@ let g:phpcomplete_remove_constant_extensions = ['xslt_php_4']
 
 "autocmd BufRead,BufNewFile *.php set filetype=php.zuniphp
 "autocmd FileType php  set tags^=~/www/tags/framework/zuniphp
+"
+
+" config syntax html5
+"-------------------------------------------------
+"
+"Disable event-handler attributes support:
+let g:html5_event_handler_attributes_complete = 0
+
+"Disable RDFa attributes support:
+let g:html5_rdfa_attributes_complete = 0
+
+"Disable microdata attributes support:
+let g:html5_microdata_attributes_complete = 0
+
+"Disable WAI-ARIA attribute support:
+let g:html5_aria_attributes_complete = 0
 
 
 if has("autocmd")
@@ -185,14 +201,14 @@ cab ntree NERDTreeToggle|cab NTREE NERDTreeToggle
 cab Ntree NERDTreeToggle|cab nTREE NERDTreeToggle
 cab nerdTree NERDTreeToggle|cab NERDTREE NERDTreeToggle
 cab nerdtree NERDTreeToggle
-
+cab ntreeo NERDTree|cab ntreec NERDTreeClose
+cab ntreeopen NERDTree|cab ntreeclose NERDTreeClose
 map <leader>nt :NERDTreeToggle<CR>
 inoremap <leader>nt <c-o>:NERDTreeToggle<CR>
 
 " 
 " -------------------------------------------------
 "
-
 
 
 " TComment
