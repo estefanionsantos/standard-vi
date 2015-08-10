@@ -36,6 +36,21 @@ map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 map ,u :source /etc/vim/vimrc<CR> " file vimrc recharged!"
 
+" set the names of flags
+let tlist_php_settings = 'php;c:class;f:function;d:constant'
+
+" close all folds except for current file
+let Tlist_File_Fold_Auto_Close = 1
+
+" make tlist pane active when opened
+let Tlist_GainFocus_On_ToggleOpen = 1
+
+" width of window
+let Tlist_WinWidth = 40
+
+" close tlist when a selection is made
+let Tlist_Close_On_Select = 1
+
 
 syntax enable 
 set regexpengine=1
@@ -130,15 +145,15 @@ inoremap [ []<left>
 inoremap ' ''<left>
 inoremap " ""<left>
 
-map <F10> :w!<cr>
 nmap <F12> :!ctags -R .<cr>
-nmap <silent> <F4> :!ctags -R --languages=php .<CR>
+nmap <F4> :!ctags -R --fields=+aimS --languages=php .<CR>
 
+map <F10> :w!<cr>
 noremap <leader>w :w!<cr>
 noremap <leader>W :wa!<cr>
 
-inoremap <leader>W <c-o>:wa!<cr>
-inoremap <leader>w <c-o>:w!<cr>
+"inoremap <leader>W <c-o>:wa!<cr>
+"inoremap <leader>w <c-o>:w!<cr>
 map ,w :w!<cr>
 map ,W :wa!<cr>
 
@@ -150,10 +165,10 @@ let g:fuf_mrucmd_maxItem = 400
 
 nnoremap <Leader>f :FufFile<cr>
 nnoremap <Leader>b :FufBuffer<cr>
-"nnoremap <Leader>t :FufTag<cr>
+nnoremap <Leader>t :FufTag<cr>
 
-inoremap <leader>f <c-o>:FufFile<cr>
-inoremap <leader>b <c-o>:FufBuffer<cr>
+"inoremap <leader>f <c-o>:FufFile<cr>
+"inoremap <leader>b <c-o>:FufBuffer<cr>
 "inoremap <leader>t <c-o>:FufTag<cr>
 
 map ,f :FufFile<cr>
@@ -206,7 +221,7 @@ cab nerdtree NERDTreeToggle
 cab ntreeo NERDTree|cab ntreec NERDTreeClose
 cab ntreeopen NERDTree|cab ntreeclose NERDTreeClose
 map <leader>nt :NERDTreeToggle<CR>
-inoremap <leader>nt <c-o>:NERDTreeToggle<CR>
+"inoremap <leader>nt <c-o>:NERDTreeToggle<CR>
 
 " 
 " -------------------------------------------------
@@ -224,10 +239,9 @@ cab hlword let @/="<C-r><C-w>"
 
 set ai              " auto-identacao (set autoindent)
 set ci              " gira em torno de C recuo stilo (set cindent)
-"set shiftwidth=4   " creates 4 spaces in the tab
-"set tabstop=4      " changes the width of tab
-"set softtabstop=4
-set tabstop = softtabstop = shiftwidth = 4 " ensure equal spaces
+set shiftwidth=4    " creates 4 spaces in the tab
+set tabstop=4       " changes the width of tab
+set softtabstop=4   " option to cause <Tab> and <BS> to the correct number of spaces 
 set expandtab       " creates spaces instead of tab
 set sm              " shows the beginning of a new closed block {},[], () (set showmatch)
 set nu              " numbered lines (set number)
