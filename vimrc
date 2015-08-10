@@ -37,6 +37,8 @@ map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 map ,u :source /etc/vim/vimrc<CR> " file vimrc recharged!"
 
 
+syntax enable 
+set regexpengine=1
 
 " OmniCppComplete
 let OmniCpp_NamespaceSearch = 1
@@ -222,14 +224,16 @@ cab hlword let @/="<C-r><C-w>"
 
 set ai              " auto-identacao (set autoindent)
 set ci              " gira em torno de C recuo stilo (set cindent)
+"set shiftwidth=4   " creates 4 spaces in the tab
+"set tabstop=4      " changes the width of tab
+"set softtabstop=4
+set tabstop = softtabstop = shiftwidth = 4 " ensure equal spaces
 set expandtab       " creates spaces instead of tab
-set shiftwidth=4    " creates 4 spaces in the tab
-set tabstop=4       " changes the width of tab
 set sm              " shows the beginning of a new closed block {},[], () (set showmatch)
 set nu              " numbered lines (set number)
 set is              " increases search (set incrementedsearch)
 set hls             " Highlight search (set higlightedsearch)
-set is              " ignores case sensitive (set ignorecase)
+set ignorecase      " ignores case sensitive (set ignorecase)
 set scs             " considers uppercase of lowercase (set smartcase )
 set hidden          " Hide buffers when they are abandoned
 set nobackup        " no backup
@@ -240,7 +244,9 @@ set background=dark " background
 set showcmd         " Show (partial) command in status line.
 set ruler           " ruler
 set lisp            " autocomplete with dash '-'
-"set autowrite       " Automatically save before commands like :next and :make
+"set autowrite      " Automatically save before commands like :next and :make
+
+
 
 set cul
 hi cursorline cterm=NONE ctermbg=black guibg=dargray
