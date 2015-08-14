@@ -10,16 +10,16 @@ let php_special_vars = 0
 
 " set makeprg=php\ -1\ %
 " set errorformat=%m\ in\ %f\ on\ line\ %1
-iab myAuthorName Estefanio NS <estefanions@gmail.com>
-iab myFullName Estefanio Nunes dos Santos
-iab myName Estefanio NS
-iab myEmail estefanions@gmail.com
-iab myWebsite http://estefanio.com.br
+iab iinm Estefanio NS <estefanions@gmail.com>
+iab iifn Estefanio Nunes dos Santos
+iab iim estefanions@gmail.com
+iab iiws http://estefanio.com.br
+ 
 
 "set foldmethod=indent
 "set foldminlines=5
 
-autocmd FileType php 	    	setlocal omnifunc=phpcomplete#CompletePHP
+autocmd FileType php    	setlocal omnifunc=phpcomplete#CompletePHP
 autocmd FileType python     setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html       setlocal omnifunc=htmlcomplete#CompleteTags
