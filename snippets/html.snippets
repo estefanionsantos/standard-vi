@@ -259,15 +259,17 @@ snippet htmlfile
 	<!DOCTYPE HTML>
 	<html lang="${1:pt-br}">
 	    <head>
-	        <meta charset="${2:UTF-8}"/>
-	        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<!--[if lt IE 9]>
-						<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-				<![endif]-->
-		<title>${3:`Filename()`}</title>
+	      <meta charset="${2:UTF-8}"/>
+	      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<title>${3:`Filename()`}</title>
 	    </head>
 	<body>
+
 		${4}
+
+	<!--[if lt IE 9]>
+	<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	</body>
 	</html>
 ## HTML File
@@ -275,15 +277,17 @@ snippet htmlf
 	<!DOCTYPE HTML>
 	<html lang="${1:pt-br}">
 	    <head>
-	        <meta charset="${2:UTF-8}"/>
-	        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<!--[if lt IE 9]>
-						<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-				<![endif]-->
-		<title>${3:`Filename()`}</title>
+	      <meta charset="${2:UTF-8}"/>
+	      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<title>${3:`Filename()`}</title>
 	    </head>
 	<body>
+
 		${4}
+
+	<!--[if lt IE 9]>
+	<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	</body>
 	</html>
 #
@@ -350,15 +354,15 @@ snippet script
 snippet scriptsrc
 	<script src="${1}" type="text/javascript"></script>
 #	
-snippet scriptjqlast
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+snippet scriptjq
+	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
 #	
-snippet scriptjquerylast
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+snippet scriptjquery
+	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
 #	
 snippet scripthtml5
 		<!--[if lt IE 9]>
-				<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+				<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 snippet style
 	<style type="text/css" media="${1:all}">
@@ -478,17 +482,17 @@ snippet form#
 		${4}
 	</form>
 #	
-snippet formmultpart
+snippet formdata
 	<form action="${1}" method="${2:post}" enctype="multipart/form-data">
 		${3}
 	</form>
 #	
-snippet formmultpart.
+snippet formmdata.
 	<form class="${1}" action="${2}" method="${3:post}" enctype="multipart/form-data">
 		${4}
 	</form>
 #	
-snippet formmultpart#
+snippet formdata#
 	<form id="${1}" action="${2}" method="${3:post}" enctype="multipart/form-data">
 		${4}
 	</form>
@@ -579,6 +583,12 @@ snippet mailto#
 #	
 snippet meta
 	<meta name="${1:name}" content="${2:content}" />${3}
+#	
+snippet metaog
+	<meta property="og:${1:type}" content="${2:article}" />${3}
+#	
+snippet metaitem
+	<meta itemprop="${1:name}" content="${2:content}" />${3}
 #	
 snippet option
 	<option value="${1:value}">${2:$1}</option>${3}

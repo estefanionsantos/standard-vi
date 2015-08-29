@@ -152,8 +152,8 @@ map <F10> :w!<cr>
 noremap <leader>w :w!<cr>
 noremap <leader>W :wa!<cr>
 
-"inoremap <leader>W <c-o>:wa!<cr>
-"inoremap <leader>w <c-o>:w!<cr>
+inoremap <leader>W <c-o>:wa!<cr>
+inoremap <leader>w <c-o>:w!<cr>
 map ,w :w!<cr>
 map ,W :wa!<cr>
 

@@ -15,14 +15,53 @@ snippet @m
 	{
 		${2}
 	}
+
+#
+#
+# @media min
+snippet @mn
+	@media (min-width: ${1:768px}) 
+	{
+			${2}
+	}
+
+#
+#
+# @media min
+snippet @mx
+	@media (max-width: ${1:768px}) 
+	{
+				${2}
+	}
+#
+#
+# @media min
+snippet @mediamin
+	@media (min-width: ${1:768px}) 
+	{
+			${2}
+	}
+
+#
+#
+# @media min
+snippet @mediamax
+	@media (max-width: ${1:768px}) 
+	{
+			${2}
+	}
+
+
 #
 #
 # @media screen and ((min-width : 321px)
 snippet @mq
-	@media ${1:screen} and ($2)
+	@media ${1:screen} and (${2:768px})
 	{
 		${3}
 	}
+
+	
 #
 #
 # webkit-based browsers
@@ -170,14 +209,6 @@ snippet general_media_queries
 	{  
 		/* Styles */  
 	} 
-
-
-snippet @mediamax 
-		@media (max-width: ${1:800px}) {
-
-		${2}
-
-		}
 
 #
 #
