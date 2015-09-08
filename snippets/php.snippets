@@ -474,50 +474,60 @@ snippet namespace2
 #	
 snippet nsclass
 	namespace ${1:Project};
+
 	${2}
-		class ${3:`Filename()`}
-		{
-				${4}
-		}
+
+	class ${3:`Filename()`}
+	{
+			${4}
+	}
 
 
 # namespace class	
 snippet nsclasse
 	namespace ${1:Project};
+
 	${2}
-		class ${3:`Filename()`} extends ${4:ExtendClass}
-		{
-				${5}
-		}
+
+	class ${3:`Filename()`} extends ${4:ExtendClass}
+	{
+			${5}
+	}
 
 
 # namespace class	
 snippet nsclassi
 	namespace ${1:Project};
+
 	${2}
-		class ${3:`Filename()`} implements ${4:InterfaceClass}
-		{
-				${5}
-		}
+
+	class ${3:`Filename()`} implements ${4:InterfaceClass}
+	{
+			${5}
+	}
 
 
 
 # namespace class	
 snippet nsclassei
 	namespace ${1:Project};
+
 	${2}
-		class ${3:`Filename()`} extends ${4:ExtendClass}
-		implements ${5:InterfaceClass}
-		{
-				${6}
-		}
+
+	class ${3:`Filename()`} extends ${4:ExtendClass}
+	implements ${5:InterfaceClass}
+	{
+			${6}
+	}
 
 
 
 # namespace class	
 snippet nsclassa
 	namespace ${1:Project};
+
 	${2}
+
 	abstract class ${3:`Filename()`}
 	{
 		${4}
@@ -526,49 +536,59 @@ snippet nsclassa
 # namespace class	
 snippet _nsclass namespace|Class
 	namespace ${1:Project};
+
 	${2}
-		class ${3:`Filename()`}
-		{
-				${4}
-		}
+
+	class ${3:`Filename()`}
+	{
+			${4}
+	}
 
 # namespace class	
 snippet _nsclass namespace|Class|Extends
 	namespace ${1:Project};
+
 	${2}
-		class ${3:`Filename()`} extends ${4:ExtendClass}
-		{
-				${5}
-		}
+
+	class ${3:`Filename()`} extends ${4:ExtendClass}
+	{
+			${5}
+	}
 
 
 # namespace class	
 snippet _nsclass namespace|Class|Implements
 	namespace ${1:Project};
+
 	${2}
-		class ${3:`Filename()`} implements ${4:InterfaceClass}
-		{
-				${5}
-		}
+
+	class ${3:`Filename()`} implements ${4:InterfaceClass}
+	{
+			${5}
+	}
 
 
 
 # namespace class	
 snippet _nsclass namespace|Class|Extends|Implements
 	namespace ${1:Project};
+
 	${2}
-		class ${3:`Filename()`} extends ${4:ExtendClass}
-		implements ${5:InterfaceClass}
-		{
-				${6}
-		}
+
+	class ${3:`Filename()`} extends ${4:ExtendClass}
+	implements ${5:InterfaceClass}
+	{
+			${6}
+	}
 
 
 
 # namespace class	
 snippet _nsclass namespace|abstrac Class
 	namespace ${1:Project};
+
 	${2}
+
 	abstract class ${3:`Filename()`}
 	{
 		${4}
@@ -648,14 +668,9 @@ snippet wh
 	}
 #
 snippet ?wh
-	<php 
-		while (${1:TRUE})
-		{
-	?>
+	<php while (${1:TRUE}) { ?>
 				${2}
-	<?php
-		}
-	?>
+	<?php } ?>
 #
 # do ... while
 snippet do
@@ -666,14 +681,9 @@ snippet do
 	while (${1:TRUE});
 #
 snippet ?do
-	<?php 
-		do {
-	?>
+	<?php do { ?>
 		${2}
-	<?php 
-		}
-		while (${1:TRUE});
-	?>
+	<?php } while (${1:TRUE}); ?>
 #
 snippet if
 	if (${1:TRUE})
@@ -682,14 +692,9 @@ snippet if
 	}
 #
 snippet ?if
-	<?php
-		if (${1:TRUE})
-		{
-	?>
+	<?php if (${1:TRUE}) { ?>
 		${2}
-	<?php
-		}
-	?>
+	<?php } ?>
 #
 snippet ife
 	if (${1})
@@ -746,6 +751,12 @@ snippet foreach
 	{
 		${3}
 	}
+
+#
+snippet ?foreach
+	<?php foreach ($${1:list} as $${2:row}) { ?>
+		${3}
+	<?php } ?>
 
 #
 # while	
