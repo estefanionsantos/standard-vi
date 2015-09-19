@@ -8,17 +8,23 @@ snippet main
 		return 0;
 	}
 # main(void)
-snippet mainvoid
-	int main(void)
+snippet vmain
+	void main(void)
 	{
+	
+
 		${1}
-		return 0;
+
+
 	}
 # main(void)
-snippet mainv
+snippet imain
 	int main(void)
 	{
+	
 		${1}
+
+		
 		return 0;
 	}
 # #include <...>
@@ -55,21 +61,24 @@ snippet once
 	#endif /* end of include guard: $1 */
 # If Condition
 snippet if
-	if (${1:/* condition */}) {
-		${2:/* code */}
+	if (${1:TRUE}) 
+	{
+		${2:}
 	}
 snippet el
-	else {
+	else 
+	{
 		${1}
 	}
 # Tertiary conditional
 snippet t
-	${1:/* condition */} ? ${2:a} : ${3:b}
+	${1:a} ? ${2:b} : ${3:c}
 # Do While Loop
 snippet do
-	do {
-		${2:/* code */}
-	} while (${1:/* condition */});
+	do 
+	{
+		${2}
+	} while (${1:TRUE});
 #
 # while	
 snippet while
