@@ -28,7 +28,7 @@ snippet e
 # <?php ?>	
 snippet php
 	<?php ${1} ?>
-#
+#A
 #
 #
 # <?php ?>	
@@ -147,28 +147,55 @@ snippet classei
 		${4}
 	}
 
+
 #
-snippet classii
+snippet classi
 	class ${1:`Filename()`} implements ${2:InterfaceClass}
 	{
 		${3}
 	}
 
 
+# 
+snippet iclass
+	interface ${1:`Filename()`}
+	{
+		${2}
+	}
+
+
 #
-snippet classa
+snippet aclass
 	abstract class ${1:`Filename()`}
 	{
 		${2}
 	}
 
 
-# Interface
-snippet classi
-	interface ${1:`Filename()`}
+#
+snippet aclasse
+	abstract class ${1:`Filename()`} extends ${2:ExtendClass}
 	{
 		${2}
 	}
+
+
+#
+snippet aclassi
+	abstract class ${1:`Filename()`} implements ${2:InterfaceClass}
+	{
+		${2}
+	}
+
+
+#
+snippet aclassei
+	abstract class ${1:`Filename()`} extends ${2:ExtendClass}
+	implements ${3:InterfaceClass}
+	{
+		${2}
+	}
+
 
 # Interface
 snippet interface
@@ -177,39 +204,75 @@ snippet interface
 		${2}
 	}
 
-#
-snippet class_ class MyClass{}
+# 
+snippet class_  MyClass
 	class ${1:`Filename()`}
 	{
 		${2}
-	}
-#	
-snippet class_ class MyClass extends ExtendClass{}
-	class ${1:`Filename()`} extends ${2:ExtendClass}
-	{
-		${3}
-	} 
+	}	
 
 
 #
-snippet class_ MyClass extends ExtendClass implements InterfaceClass{}
+snippet class_ MyClass|ExtendClass
+	class ${1:`Filename()`} extends ${2:ExtendClass}
+	{
+				${3}
+	}
+
+#
+snippet class_ MyClass|ExtendClass
 	class ${1:`Filename()`} extends ${2:ExtendClass}
 	implements ${3:InterfaceClass}
 	{
 		${4}
 	}
 
+
 #
-snippet class_ class MyClass implements InterfaceClass
+snippet class_ MyClass|InterfaceClass
 	class ${1:`Filename()`} implements ${2:InterfaceClass}
 	{
 		${3}
 	}
 
 
+# 
+snippet class_ InterfaceClass
+	interface ${1:`Filename()`}
+	{
+		${2}
+	}
+
+
 #
-snippet class_ abstract class MyClass{}
+snippet class_ AbstractClass
 	abstract class ${1:`Filename()`}
+	{
+		${2}
+	}
+
+
+#
+snippet class_ AbstractClass|ExtendClass
+	abstract class ${1:`Filename()`} extends ${2:ExtendClass}
+	{
+		${2}
+	}
+
+
+#
+snippet aclassi AbstractClass|InterfaceClass
+	abstract class ${1:`Filename()`} implements ${2:InterfaceClass}
+	{
+		${2}
+	}
+
+
+#
+snippet class_ AbstractClass|ExtendsClass|InterfaceClass 
+
+	abstract class ${1:`Filename()`} extends ${2:ExtendClass}
+	implements ${3:InterfaceClass}
 	{
 		${2}
 	}
