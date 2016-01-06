@@ -86,8 +86,11 @@ let g:acp_enableAtStartup = 1 " auto popup 0|1
 " ----------------------------------------------------------------------
 
 
+inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
+noremap <Leader>e :call PhpExpandClass()<CR>
 
-
+inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+noremap <Leader>u :call PhpInsertUse()<CR>
 
 
 
@@ -145,7 +148,7 @@ inoremap [ []<left>
 inoremap ' ''<left>
 inoremap " ""<left>
 
-nmap <F12> :!ctags -R .<cr>
+nmap <F12> :!ctags -R --PHP-kinds=+cf .<cr>
 nmap <F4> :!ctags -R --fields=+aimS --languages=php .<CR>
 
 map <F10> :w!<cr>
@@ -257,20 +260,13 @@ set mouse=a         " Enable mouse usage (all modes)
 set background=dark " background
 set showcmd         " Show (partial) command in status line.
 set ruler           " ruler
-set lisp            " autocomplete with dash '-'
+"set lisp            " autocomplete with dash '-'
+"set isk+=-  " -
 "set autowrite      " Automatically save before commands like :next and :make
 
 
 
 set cul
 hi cursorline cterm=NONE ctermbg=black guibg=dargray
-
-
-" Tabular
-nnoremap <leader>a= :Tabularize /=<CR>
-vnoremap <leader>a= :Tabularize /=<CR>
-nnoremap <leader>a: :Tabularize /:\zs<CR>
-vnoremap <leader>a: :Tabularize /:\zs<CR>
-
 
              
