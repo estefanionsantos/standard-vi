@@ -226,24 +226,6 @@ snippet lorempixel transport
 	http://lorempixel.com/${1:250}/${2:250}/transport/${3:1}/
 #
 ## HTML File
-snippet htmlfile
-	<!DOCTYPE HTML>
-	<html lang="${1:pt-br}">
-	    <head>
-	      <meta charset="${2:UTF-8}"/>
-	      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<title>${3:`Filename()`}</title>
-	    </head>
-	<body>
-
-		${4}
-
-	<!--[if lt IE 9]>
-	<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	</body>
-	</html>
-## HTML File
 snippet htmlf
 	<!DOCTYPE HTML>
 	<html lang="${1:pt-br}">
@@ -267,44 +249,9 @@ snippet html
 	${1}
 	</html>
 #
-snippet html.
-	<html class="${1}">
-	${2}
-	</html>
-#
-snippet html#
-	<html id="${1}">
-	${2}
-	</html>
-#
-snippet xhtml
-	<html xmlns="http://www.w3.org/1999/xhtml">
-	${1}
-	</html>
-#
-snippet xhtml.
-	<html class="${1}" xmlns="http://www.w3.org/1999/xhtml">
-	${2}
-	</html>
-#
-snippet xhtml#
-	<html id="${1}" xmlns="http://www.w3.org/1999/xhtml">
-	${2}
-	</html>
-#
 snippet body
 	<body>
 		${1}
-	</body>
-#
-snippet body.
-	<body class="${1}">
-		${2}
-	</body>
-#
-snippet body#
-	<body id="${1}">
-		${2}
 	</body>
 #
 snippet head
@@ -328,9 +275,6 @@ snippet scriptsrc
 snippet scriptjq
 	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
 #	
-snippet scriptjquery
-	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
-#	
 snippet scripthtml5
 		<!--[if lt IE 9]>
 				<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -346,20 +290,9 @@ snippet base
 snippet br
 	<br />
 #	
-snippet br.
-	<br class="${1}"/>
-#	
-snippet br#
-	<br id="${1}"/>
-#	
 snippet div
 	<div>${1}</div>
 #	
-snippet div.
-	<div class="${1}">${2}</div>
-#	
-snippet div#
-	<div id="${1}">${2}</div>
 # Embed QT Movie
 snippet movie
 	<object width="$2" height="$3" classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"
@@ -377,25 +310,9 @@ snippet movie
 snippet hr
 	<hr />
 #	
-snippet hr.
-	<hr class="${1}"/>
-#	
-snippet hr#
-	<hr id="${1}"/>
-#	
 snippet pre
 	<pre>
 		${1}
-	</pre>
-#	
-snippet pre.
-	<pre class="${1}">
-		${2}
-	</pre>
-#	
-snippet pre#
-	<pre id="${1}">
-		${2}
 	</pre>
 #	
 #	
@@ -404,68 +321,22 @@ snippet p
 		${1}
 	</p>
 #	
-snippet p.
-	<p class="${1}">
-		${2}
-	</p>
-#	
-snippet p#
-	<p id="${1}">
-		${2}
-	</p>
-#	
 snippet fieldset
 	<fieldset>
 		${1}
 	</fieldset>
 #	
-snippet fieldset.
-	<fieldset class="${1}">
-		${2}
-	</fieldset>
-#	
-snippet fieldset#
-	<fieldset id="${1}">
-		${2}
-	</fieldset>
-#	
 snippet legend
 	<legend>${1}</legend>
-#	
-snippet legend.
-	<legend class="${1}">${2}</legend>
-#	
-snippet legend#
-	<legend id="${1}">${2}</legend>
 #	
 snippet form
 	<form action="${1}" method="${2:post}">
 		${3}
 	</form>
 #	
-snippet form.
-	<form class="${1}"action="${2}" method="${3:post}">
-		${4}
-	</form>
-#	
-snippet form#
-	<form id="${1}"action="${2}" method="${3:post}">
-		${4}
-	</form>
-#	
 snippet formdata
 	<form action="${1}" method="${2:post}" enctype="multipart/form-data">
 		${3}
-	</form>
-#	
-snippet formmdata.
-	<form class="${1}" action="${2}" method="${3:post}" enctype="multipart/form-data">
-		${4}
-	</form>
-#	
-snippet formdata#
-	<form id="${1}" action="${2}" method="${3:post}" enctype="multipart/form-data">
-		${4}
 	</form>
 #	
 snippet h1
@@ -485,74 +356,20 @@ snippet h5
 #	
 snippet h6
 	<h6>${1}</h6>
-# headingh class	
-snippet h1.
-	<h1 class="${1}">${2}</h1>
-#	
-snippet h2.
-	<h2 class="${1}">${2}</h2>
-#	
-snippet h3.
-	<h3 class="${1}">${2}</h3>
-#	
-snippet h4.
-	<h4 class="${1}">${2}</h4>
-#	
-snippet h5.
-	<h5 class="${1}">${2}</h5>
-#	
-snippet h6.
-	<h6 class="${1}">${2}</h6>
-# headingh id	
-snippet h1#
-	<h1 id="${1}">${2}</h1>
-#	
-snippet h2#
-	<h2 id="${1}">${2}</h2>
-#	
-snippet h3#
-	<h3 id="${1}">${2}</h3>
-#	
-snippet h4#
-	<h4 id="${1}">${2}</h4>
-#	
-snippet h5#
-	<h5 id="${1}">${2}</h5>
-#	
-snippet h6#
-	<h6 id="${1}">${2}</h6>
 #	
 snippet input
 	<input type="${1:text}" name="${2:some_name}" value="${3}" />
-#	
-snippet input.
-	<input class="${1}" type="${2:text}" name="${3:some_name}" value="${4}" />
-#	
-snippet input#
-	<input id="${1}" type="${2:text}" name="${3:some_name}" value="${4}" />
 #	
 snippet button
 	<button>${1:Ok}</button>
 snippet label
 	<label>${1:name}</label>
 #	
-snippet label.
-	<label class="${1}">${2:name}</label>
-#	
-snippet label#
-	<label id="${1}">${2:name}</label>
-#	
 snippet link
 	<link rel="${1:stylesheet}" href="${2}" type="text/css" media="${3:all}" />${4}
 #	
 snippet mailto
 	<a href="mailto:${1:me@example.com}?subject=${2:feedback}">${3:email me}</a>
-#	
-snippet mailto.
-	<a class="${1}" href="mailto:${2:me@example.com}?subject=${3:feedback}">${4:email me}</a>
-#	
-snippet mailto#
-	<a id="${1}" href="mailto:${2:me@example.com}?subject=${3:feedback}">${4:email me}</a>
 #	
 snippet meta
 	<meta name="${1:name}" content="${2:content}" />${3}
@@ -569,16 +386,6 @@ snippet option
 snippet select
 	<select name="${1:some_name}">
 		${2}
-	</select>
-#	
-snippet select.
-	<select class="${1}" name="${2:some_name}">
-		${3}
-	</select>
-#	
-snippet select#
-	<select id="${1}" name="${2:some_name}">
-		${3}
 	</select>
 #	
 snippet table_h
@@ -616,62 +423,20 @@ snippet table
 	${1}
 	</table>
 #
-snippet table.
-	<table class="${1}">
-	${2}
-	</table>
-#
-snippet table#
-	<table id="${1}">
-	${2}
-	</table>
-#
 snippet th
 	<th>${1}</th>
-#
-snippet th.
-	<th class="${1}">${2}</th>
-#
-snippet th#
-	<th id="${1}">${2}</th>
 #
 snippet tr
 	<tr>
 		${1}
 	</tr>
 #
-snippet tr.
-	<tr class="${1}">
-		${2}
-	</tr>
-#
-snippet tr#
-	<tr id="${1}">
-		${2}
-	</tr>
-#
 snippet td
 	<td>${1}</td>
-#
-snippet td.
-	<td class="${1}">${2}</td>
-#
-snippet td#
-	<td id="${1}">${2}</td>
 #
 snippet thead
 	<thead>
 		${1}
-	</thead>
-#
-snippet thead.
-	<thead class="${1}">
-		${2}
-	</thead>
-#
-snippet thead#
-	<thead id="${1}">
-		${2}
 	</thead>
 #
 snippet tfoot
@@ -679,73 +444,24 @@ snippet tfoot
 		${1}
 	</tfoot>
 #
-snippet tfoot.
-	<tfoot class="${1}">
-		${2}
-	</tfoot>
-#
-snippet tfoot#
-	<tfoot id="${1}">
-		${2}
-	</tfoot>
-#
 snippet tbody
 	<tbody>
 		${1}
 	</tbody>
 #
-snippet tbody.
-	<tbody class="${1}">
-		${2}
-	</tbody>
-#
-snippet tbody#
-	<tbody id="${1}">
-		${2}
-	</tbody>
-#
 snippet textarea
 	<textarea name="${1:name}" rows="${2:8}" cols="${3:30}">${4}</textarea>
 #
-snippet textarea.
-	<textarea class="${1}" name="${2:name}" rows="${3:8}" cols="${4:30}">${5}</textarea>
-#
-snippet textarea#
-	<textarea id="${1}" name="${2:name}" rows="${3:8}" cols="${4:30}">${5}</textarea>
-#
 snippet a
 	<a href="${1:#}">${2:linkname}</a>
-#
-snippet a.
-	<a class="${1}" href="${2:#}">${3:linkname}</a>
-#
-snippet a#
-	<a id="${1}" href="${2:#}">${3:linkname}</a>
 #
 snippet aimg
 	<a href="${1:#}">
 		<img src="${2:my-image.jpg}" alt="${2:My Image}" />
 	</a>	
 #
-snippet aimg.
-	<a class="${1}" href="${2:#}">
-		<img src="${3:my-image.jpg}" alt="${4:My Image}" />
-	</a>	
-#
-snippet aimg#
-	<a id="${1}" href="${2:#}">
-		<img src="${3:my-image.jpg}" alt="${4:My Image}" />
-	</a>	
-#
 snippet img
 	<img src="${1:my-image.jpg}" alt="${2:My Image}"/>
-#
-snippet img.
-	<img class="${1}" src="${2:my-image.jpg}" alt="${3:My Image}"/>
-#
-snippet img#
-	<img id="${1}" src="${2:my-image.jpg}" alt="${3:My Image}"/>
-# http://placehold.it/${1:250}x${2:150}.${3:jpg}/${4:09c}/${5:fff}/&text=${6:My+Image+:)}
 #
 snippet i
 	<i>${1}</i>
@@ -762,68 +478,16 @@ snippet em
 snippet span
 	<span>${1}</span>
 #
-snippet i.
-	<i class="${1}">${2}</i>
-#
-snippet b.
-	<b class="${1}">${2}</b>
-#
-snippet strong.
-	<strong class="${1}">${2}</strong>
-#
-snippet em.
-	<em class="${1}">${2}</em>
-#
-snippet span.
-	<span class="${1}">${2}</span>
-#
-snippet i#
-	<i id="${1}">${2}</i>
-#
-snippet b#
-	<b id="${1}">${2}</b>
-#
-snippet strong#
-	<strong id="${1}">${2}</strong>
-#
-snippet em#
-	<em id="${1}">${2}</em>
-#
-snippet span#
-	<span id="${1}">${2}</span>
-#
 snippet ul
 	<ul>
 		${1}
 	</ul>	
-#
-snippet ul.
-	<ul class="${1}">
-		${2}
-	</ul>	
-#
-snippet ul#
-	<ul id="${1}">
-		${2}
-	</ul>	
-#
+
 snippet li
 	<li>${1}</li>
 #
-snippet li.
-	<li class="${1}">${2}</li>
-#
-snippet li#
-	<li id="${1}">${2}</li>
-#
 snippet lia
 	<li><a href="${1:#}">${2:linkname}</a></li>
-#
-snippet lia.
-	<li class="${1}"><a href="${2:#}">${3:linkname}</a></li>
-#
-snippet lia#
-	<li id="${1}"><a href="${2:#}">${3:linkname}</a></li>
 #
 snippet liaimg
 	<li>
@@ -832,43 +496,12 @@ snippet liaimg
 		</a>
 	</li>
 #
-snippet liaimg.
-	<li class="${1}">
-		<a href="${2:#}">
-			<img src="${3:image.jpg}" alt="${4:my image}" />
-		</a>
-	</li>
-#
-snippet liaimg#
-	<li id="${1}">
-		<a href="${2:#}">
-			<img src="${3:image.jpg}" alt="${4:my image}" />
-		</a>
-	</li>
-#
 snippet liimg
 	<li><img src="${1:image.jpg}" alt="${2:my image} /></li>
-#
-snippet liimg.
-	<li class="${1}"><img src="${2:image.jpg}" alt="${3:my image} /></li>
-#
-snippet liimg#
-	<li id="${1}"><img src="${2:image.jpg}" alt="${3:my image} /></li>
-##
 #
 snippet ol
 	<ol>
 		${1}
-	</ol>
-#
-snippet ol.
-	<ol class="${1}">
-		${2}
-	</ol>
-#
-snippet ol#
-	<ol id="${1}">
-		${2}
 	</ol>
 #
 snippet dl
@@ -876,42 +509,14 @@ snippet dl
 		${1}
 	</dl>
 #
-snippet dl.
-	<dl class="${1}">
-		${2}
-	</dl>
-#
-snippet dl#
-	<dl id="${1}">
-		${2}
-	</dl>
-#
 snippet dd
 	<dd>${1}</dd>
-#
-snippet dd.
-	<dd class="${1}">${2}</dd>
-#
-snippet dd#
-	<dd class="${1}">${2}</dd>
 #
 snippet dt
 	<dt>${1}</dt>
 #
-snippet dt.
-	<dt class="${1}">${2}</dt>
-#
-snippet dt#
-	<dt id="${1}">${2}</dt>
-#
 snippet dda
 	<dd><a href="${1:#}">${2:linkname}</a></dd>
-#
-snippet dda.
-	<dd class="${1}"><a href="${2:#}">${3:linkname}</a></dd>
-#
-snippet dda#
-	<dd id="${1}"><a href="${2:#}">${3:linkname}</a></dd>
 #
 snippet ddaimg
 	<dd>
@@ -920,37 +525,11 @@ snippet ddaimg
 		</a>
 	</dd>
 #
-snippet ddaimg.
-	<dd class="${1}">
-		<a href="${2:#}">
-			<img src="${3:image.jpg}" alt="${4:my image}" />
-		</a>
-	</dd>
-#
-snippet ddaimg#
-	<dd id="${1}">
-		<a href="${2:#}">
-			<img src="${3:image.jpg}" alt="${4:my image}" />
-		</a>
-	</dd>
-#
 snippet ddimg
 	<dd><img src="${1:image.jpg}" alt="${2:my image} /></dd>	
 #
-snippet ddimg.
-	<dd class="${1}"><img src="${2:image.jpg}" alt="${3:my image} /></dd>	
-#
-snippet ddimg#
-	<dd id="${1}"><img src="${2:image.jpg}" alt="${3:my image} /></dd>	
-#
 snippet dta
 	<dt><a href="${1:#}">${2:linkname}</a></dt>
-#
-snippet dta.
-	<dt class="${1}"><a href="${2:#}">${3:linkname}</a></dt>
-#
-snippet dta#
-	<dt id="${1}"><a href="${2:#}">${3:linkname}</a></dt>
 #
 snippet dtaimg
 	<dt>
@@ -959,25 +538,8 @@ snippet dtaimg
 		</a>
 	</dt>
 #
-snippet dtaimg.
-	<dt class="${1}">
-		<a href="${2:#}">
-			<img src="${3:image.jpg}" alt="${4:my image}" />
-		</a>
-	</dt>
-#
-snippet dtaimg#
-	<dt id="${1}">
-		<a href="${2:#}">
-			<img src="${3:image.jpg}" alt="${4:my image}" />
-		</a>
-	</dt>
-#
 snippet dtimg
 	<dt><img src="${1:image.jpg}" alt="${2:my image} /></dt>	
-#
-snippet dtimg.
-	<dt class="${1}"><img src="${2:image.jpg}" alt="${3:my image} /></dt>	
 #
 snippet cond
 	<!--[if ${1:lt IE 9}]>
@@ -1033,88 +595,6 @@ snippet main
 	<main>
 		${1}
 	</main>
-### attr class
-#
-snippet selection.
-	<selection class="${1}">
-		${2}
-	</selection>
-#
-snippet nav.
-	<nav class="${1}">
-		${2}
-	</nav>
-#
-snippet article.
-	<article class="${1}">
-		${2}
-	</article>
-#
-snippet aside.
-	<aside class="${1}">
-		${2}
-	</aside>
-#
-snippet hgroup.
-	<hgroup class="${1}">
-		${2}
-	</hgroup>
-#
-snippet header.
-	<header class="${1}">
-		${2}
-	</header>
-#
-snippet footer.
-	<footer class="${1}">
-		${2}
-	</footer>
-#
-snippet main.
-	<main class="${1}">
-		${2}
-	</main>
-### attr id
-#
-snippet selection#
-	<selection id="${1}">
-		${2}
-	</selection>
-#
-snippet nav#
-	<nav id="${1}">
-		${2}
-	</nav>
-#
-snippet article#
-	<article id="${1}">
-		${2}
-	</article>
-#
-snippet aside#
-	<aside id="${1}">
-		${2}
-	</aside>
-#
-snippet hgroup#
-	<hgroup id="${1}">
-		${2}
-	</hgroup>
-#
-snippet header#
-	<header id="${1}">
-		${2}
-	</header>
-#
-snippet footer#
-	<footer id="${1}">
-		${2}
-	</footer>
-#
-snippet main#
-	<main id="${1}">
-		${2}
-	</main>
 #
 #-----------------------------------------
 ### | Agrupando conteudo
@@ -1128,19 +608,6 @@ snippet figure
 snippet figcaption
 	<figcaption>${1}</figcaption>
 ### attr class	
-#
-snippet figure.
-	<figure class="${1}">${2}</figure>
-#
-snippet figcaption.
-	<figcaption class="${1}">${2}</figcaption>
-### attr id	
-#
-snippet figure#
-	<figure id="${1}">${2}</figure>
-#
-snippet figcaption#
-	<figcaption id="${1}">${2}</figcaption>
 #
 #
 #-----------------------------------------
@@ -1169,50 +636,6 @@ snippet bdi
 #
 snippet wbr
 	<wbr>${1}</wbr>
-### attr class	
-#
-snippet data.
-	<data class="${1}" value=${2}>${3}</data>
-#
-snippet time.
-	<time class="${1}" datetime="${2:2014-07-20}">${3:Jul 20}</time>
-#
-snippet mark.
-	<mark class="${1}">${3}</mark>
-#
-snippet ruby.
-	<ruby class="${1}">${2}</ruby>
-#
-snippet rp.
-	<rp class="${1}">${2}</rp>
-#
-snippet bdi.
-	<bdi class="${1}">${2}</bdi>
-#
-snippet wbr.
-	<wbr class="${1}">${2}</wbr>
-### attr id	
-#
-snippet data#
-	<data id="${1}" value=${2}>${3}</data>
-#
-snippet time#
-	<time id="${1}" datetime="${2:2015-07-20}">${3:Jul 20}</time>
-#
-snippet mark#
-	<mark id="${1}">${3}</mark>
-#
-snippet ruby#
-	<ruby id="${1}">${2}</ruby>
-#
-snippet rp#
-	<rp id="${1}">${2}</rp>
-#
-snippet bdi#
-	<bdi id="${1}">${2}</bdi>
-#
-snippet wbr#
-	<wbr id="${1}">${2}</wbr>
 #
 #
 #-----------------------------------------
@@ -1281,132 +704,6 @@ snippet svg
 	<svg width="${1:150}" height="${2:100}" viewBox="${3:0 0 3 2}">
 		<rect width="${4:1}" height="${5:2}" x="${6:0}" fill="${7:#008d46}" />
 	</svg>
-
-### attr class video
-#
-snippet video.
-	<video class="${1}" src="${2:videofile.ogg}" autoplay poster="${3:posterimage.jpg}">
-	  	${4:Sorry, your browser doesn't support embedded videos, but don't worry, you can} 
-	  	${5:<a href="videofile.ogg">download it</a>}
-	    ${6: and watch it with your favorite video player!}
-	</video>
-#
-snippet video2.
-	<video class="${1}" src="${2:foo.ogg}">
-	  <track kind="${3:subtitles}" src="${4:foo.en.vtt}" srclang="${5:en}" label="${6:English}">
-	  <track kind="${7:subtitles}" src="${8:foo.pt.vtt}" srclang="${9:pt} label="${10:Portuguese}">
-	</video>
-#
-snippet audio.
-	<audio class="${1}" src="${2:audio.ogg}" autoplay>
-	 	${3:Your browser does not support the <code>audio</code> element.} 
-	</audio>
-#
-snippet audio2.
-	<audio class="${1}" src="${2:foo.ogg}">
-	  <track kind="${3:captions}" src="${4:foo.pt.vtt}" srclang="${5:pt}" label="${6:Portuguese}">
-	  <track kind="${7:captions}" src="${7:foo.en.vtt}" srclang="${8:en}" label="${9:English}">
-	</audio>
-#
-snippet audio3.
-	<audio class="${1}" controls="${2:controls}">
-	 ${3:Your browser does not support the <code>audio</code> element.} 
-	  <source src="${4:foo.wav}" type="${5:audio/wav}">
-	</audio>
-#
-snippet source.
-	<video class="${1}" controls>
-	  <source src="${2:foo.ogg}" type="${3:video/ogg}"> <!-- Picked by Firefox -->
-	  <source src="${4:foo.mov}" type="${5:video/quicktime}"> <!-- Picked by Safari -->
-	  ${6:I'm sorry; your browser doesn't support HTML5 video.} 
-	</video>
-#
-snippet track.
-	<video class="${1}" src="${2:sample.ogv}">
-		<track kind="${3:captions}" src="${4:sampleCaptions.srt}" srclang="${5:sampleCaptions.srt}">
-		<!--<track kind="descriptions" src="sampleDesciptions.srt" srclang="en">
-		<track kind="chapters" src="sampleChapters.srt" srclang="en">
-		<track kind="subtitles" src="sampleSubtitles_de.srt" srclang="de">
-		<track kind="subtitles" src="sampleSubtitles_en.srt" srclang="en">
-		<track kind="subtitles" src="sampleSubtitles_ja.srt" srclang="ja">
-		<track kind="subtitles" src="sampleSubtitles_oz.srt" srclang="oz">
-		<track kind="metadata" src="keyStage1.srt" srclang="en" label="Key Stage 1">
-		<track kind="metadata" src="keyStage2.srt" srclang="en" label="Key Stage 2">
-		<track kind="metadata" src="keyStage3.srt" srclang="en" label="Key Stage 3">-->
-	</video>
-#
-snippet canvas.
-	<canvas class="${1}" id="${2:canvas}" width="${3:300}" height="${4:300}">
-	 ${5:Sorry, your browser doesn't support the 'canvas' element.} 
-	</canvas>
-#
-snippet svg.
-	<svg class="${1}" width="${2:150}" height="${3:100}" viewBox="${4:0 0 3 2}">
-		<rect width="${5:1}" height="${6:2}" x="${7:0}" fill="${8:#008d46}" />
-	</svg>
-
-### attr id
-#
-snippet video#
-	<video id="${1}" src="${2:videofile.ogg}" autoplay poster="${3:posterimage.jpg}">
-	  	${4:Sorry, your browser doesn't support embedded videos, but don't worry, you can} 
-	  	${5:<a href="videofile.ogg">download it</a>}
-	    ${6: and watch it with your favorite video player!}
-	</video>
-#
-snippet video2#
-	<video id="${1}" src="${2:foo.ogg}">
-	  <track kind="${3:subtitles}" src="${4:foo.en.vtt}" srclang="${5:en}" label="${6:English}">
-	  <track kind="${7:subtitles}" src="${8:foo.pt.vtt}" srclang="${9:pt} label="${10:Portuguese}">
-	</video>
-#
-snippet audio#
-	<audio id="${1}" src="${2:audio.ogg}" autoplay>
-	 	${3:Your browser does not support the <code>audio</code> element.} 
-	</audio>
-#
-snippet audio2#
-	<audio id="${1}" src="${2:foo.ogg}">
-	  <track kind="${3:captions}" src="${4:foo.pt.vtt}" srclang="${5:pt}" label="${6:Portuguese}">
-	  <track kind="${7:captions}" src="${7:foo.en.vtt}" srclang="${8:en}" label="${9:English}">
-	</audio>
-#
-snippet audio3#
-	<audio id="${1}" controls="${2:controls}">
-	 ${3:Your browser does not support the <code>audio</code> element.} 
-	  <source src="${4:foo.wav}" type="${5:audio/wav}">
-	</audio>
-#
-snippet source#
-	<video id="${1}" controls>
-	  <source src="${2:foo.ogg}" type="${3:video/ogg}"> <!-- Picked by Firefox -->
-	  <source src="${4:foo.mov}" type="${5:video/quicktime}"> <!-- Picked by Safari -->
-	  ${6:I'm sorry; your browser doesn't support HTML5 video.} 
-	</video>
-#
-snippet track#
-	<video id="${1}" src="${2:sample.ogv}">
-		<track kind="${3:captions}" src="${4:sampleCaptions.srt}" srclang="${5:sampleCaptions.srt}">
-		<!--<track kind="descriptions" src="sampleDesciptions.srt" srclang="en">
-		<track kind="chapters" src="sampleChapters.srt" srclang="en">
-		<track kind="subtitles" src="sampleSubtitles_de.srt" srclang="de">
-		<track kind="subtitles" src="sampleSubtitles_en.srt" srclang="en">
-		<track kind="subtitles" src="sampleSubtitles_ja.srt" srclang="ja">
-		<track kind="subtitles" src="sampleSubtitles_oz.srt" srclang="oz">
-		<track kind="metadata" src="keyStage1.srt" srclang="en" label="Key Stage 1">
-		<track kind="metadata" src="keyStage2.srt" srclang="en" label="Key Stage 2">
-		<track kind="metadata" src="keyStage3.srt" srclang="en" label="Key Stage 3">-->
-	</video>
-#
-snippet canvas#
-	<canvas id="${1:canvas}" width="${2:300}" height="${3:300}">
-	 ${4:Sorry, your browser doesn't support the 'canvas' element.} 
-	</canvas>
-#
-snippet svg#
-	<svg id="${1}" width="${2:150}" height="${3:100}" viewBox="${4:0 0 3 2}">
-		<rect width="${5:1}" height="${6:2}" x="${7:0}" fill="${8:#008d46}" />
-	</svg>
 #
 #
 #-----------------------------------------
@@ -1439,58 +736,6 @@ snippet progress
 snippet meter
 	<meter min="${1:200}" max="${2:500}" value="${3:350}">${4:350 degrees}</meter>
 #
-#
-### attr class form	
-#
-snippet datalist.
-	<input class="${1}" list="${2:football}" />
-	<datalist id="${3:$1}">
-		<option value="${4:Gremio}">
-		<option value="${5:Inter}">
-		<option value="${6:Juventude}">
-	</datalist>
-#
-snippet keygen.
-	<keygen class="${1}" name="${2:name}" challenge="${3:challenge string}" keytype="type" keyparams="${4:pqg-params}">
-#
-snippet output.
-	<form class="${1}" oninput="${2:result}.value=parseInt(${3:a}.value)+parseInt(${4:b}.value)">
-		<input type="range" name="${5:$3}" value="${6:50}" /> +
-		<input type="number" name="${7:2}" value="${8:10}" /> =
-		<output name="${9:$1}"></output>
-	</form>
-#
-snippet progress.
-	<progress class="${1}" value="${2:70}" max="${3:100}">${4:70 %}</progress>
-#
-snippet meter.
-	<meter class="${1}" min="${2:200}" max="${3:500}" value="${4:350}">${5:350 degrees}</meter>
-#
-#
-### attr id forms
-#
-snippet datalist#
-	<input id="${1}" list="${2:football}" />
-	<datalist id="${3:$1}">
-		<option value="${4:Gremio}">
-		<option value="${5:Inter}">
-		<option value="${6:Juventude}">
-	</datalist>
-#
-snippet keygen#
-	<keygen id="${1}" name="${2:name}" challenge="${3:challenge string}" keytype="type" keyparams="${4:pqg-params}">
-#
-snippet output#
-	<form id="${1}" oninput="${2:result}.value=parseInt(${3:a}.value)+parseInt(${4:b}.value)">
-		<input type="range" name="${5:$3}" value="${6:50}" /> +
-		<input type="number" name="${7:2}" value="${8:10}" /> =
-		<output name="${9:$1}"></output>
-	</form>
-#
-snippet progress#
-	<progress id="${1}" value="${2:70}" max="${3:100}">${4:70 %}</progress>
-#
-snippet meter#
 	<meter id="${1}" min="${2:200}" max="${3:500}" value="${4:350}">${5:350 degrees}</meter>
 #-----------------------------------------
 ### | Interactive elements
@@ -1513,46 +758,6 @@ snippet menuitem
 snippet menu
 	<menu>
 		${1}
-	</menu>
-#
-#
-### attr class interactive elements
-#
-snippet details.
-	<details class="${1}">
-		<summary>${2:Some details}</summary>
-		${3:<p>More info about the details.</p>}	
-	</details>
-#
-snippet summary.
-	<summary class="${1}">${2:Some details}</summary>
-#
-snippet menuitem.
-	<menuitem class="${1}" type="command" label="${2:save}" icon="${3:icons/save.png}" onclick="${4:save()}">
-#
-snippet menu.
-	<menu class="${1}">
-		${2}
-	</menu>
-#
-#
-### attr id interactive elements
-#
-snippet details#
-	<details id="${1}">
-		<summary>${2:Some details}</summary>
-		${3:<p>More info about the details.</p>}	
-	</details>
-#
-snippet summary#
-	<summary id="${1}">${2:Some details}</summary>
-#
-snippet menuitem#
-	<menuitem id="${1}" type="command" label="${2:save}" icon="${3:icons/save.png}" onclick="${4:save()}">
-#
-snippet menu#i
-	<menu id="${1}">
-		${2}
 	</menu>
 #
 #
