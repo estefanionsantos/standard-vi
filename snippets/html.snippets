@@ -768,7 +768,7 @@ snippet menu
 #
 ##| script Google Analytics 
 #
-snippet ga
+snippet ga script Google Analytics [setAccount] (default)
 	<script type="text/javascript">
 		var _gaq = [['_setAccount', '${1:UA-XXXXX-X}'], ['_trackPageview']];
 		(function(d, t) {
@@ -780,7 +780,7 @@ snippet ga
 	</script>
 ##| script Google Analytics option 2
 #
-snippet ga2
+snippet ga script Google Analytics [create]
 	<script type="text/javascript">
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
