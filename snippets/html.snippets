@@ -158,45 +158,16 @@ snippet doctype XHTML 1.1
 	<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 #tag geral
 #
-snippet tt
-	<${1: }>${2}</$1>
-#tag geral
-#
-snippet tt.
-	<${1: } class="${2}">${3}</$1>
-#tag geral
-#
-snippet tt#
-	<${1: } id="${2}">${3}</$1>
-#tag geral
-snippet ttn
-	<${1: }>
-	${2}
-	</$1>
-#tag geral
-snippet ttn.
-	<${1: } class="${2}">
-	${3}
-	</$1>
-#tag geral
-snippet ttn#
-	<${1: } id="${2}">
-	${3}
-	</$1>
+snippet tg
+	<${1: }${2}>${3}</$1>
 # tag open
-snippet tto
+snippet tgo
 	<${1}>
-# tag open class
-snippet tto.
-	<${1} class="${2}">
-# tag open id
-snippet tto#
-	<${1} id="${2}">
 # tag close
-snippet ttc
+snippet tgc
 	</${1}>
 # tag auto close
-snippet ttcc
+snippet tgcc
 	<${1} />
 #
 #
