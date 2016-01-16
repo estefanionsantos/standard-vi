@@ -245,13 +245,13 @@ snippet htmlf
 	</html>
 #
 snippet html
-	<html>
-	${1}
+	<html${1}>
+	${2}
 	</html>
 #
 snippet body
-	<body>
-		${1}
+	<body${1}>
+		${2}
 	</body>
 #
 snippet head
@@ -291,7 +291,7 @@ snippet br
 	<br />
 #	
 snippet div
-	<div>${1}</div>
+	<div${1}>${2}</div>
 #	
 # Embed QT Movie
 snippet movie
@@ -311,65 +311,65 @@ snippet hr
 	<hr />
 #	
 snippet pre
-	<pre>
-		${1}
+	<pre${1}>
+		${2}
 	</pre>
 #	
 #	
 snippet p
-	<p>
-		${1}
+	<p${1}>
+		${2}
 	</p>
 #	
 snippet fieldset
-	<fieldset>
-		${1}
+	<fieldset${1}>
+		${2}
 	</fieldset>
 #	
 snippet legend
-	<legend>${1}</legend>
+	<legend${1}>${2}</legend>
 #	
 snippet form
-	<form action="${1}" method="${2:post}">
-		${3}
+	<form ${1}action="${2}" method="${3:post}">
+		${4}
 	</form>
 #	
 snippet formdata
-	<form action="${1}" method="${2:post}" enctype="multipart/form-data">
-		${3}
+	<form ${1}action="${2}" method="${3:post}" enctype="multipart/form-data">
+		${4}
 	</form>
 #	
 snippet h1
-	<h1>${1}</h1>
+	<h1${1}>${2}</h1>
 #	
 snippet h2
-	<h2>${1}</h2>
+	<h2${1}>${2}</h2>
 #	
 snippet h3
-	<h3>${1}</h3>
+	<h3${1}>${2}</h3>
 #	
 snippet h4
-	<h4>${1}</h4>
+	<h4${1}>${2}</h4>
 #	
 snippet h5
-	<h5>${1}</h5>
+	<h5${1}>${2}</h5>
 #	
 snippet h6
-	<h6>${1}</h6>
+	<h6${1}>${2}</h6>
 #	
 snippet input
-	<input type="${1:text}" name="${2:some_name}" value="${3}" />
+	<input ${1}type="${2:text}" name="${3:some_name}" value="${3}" />
 #	
 snippet button
-	<button>${1:Ok}</button>
+	<button${1}>${2:Ok}</button>
 snippet label
-	<label>${1:name}</label>
+	<label${1}>${2:name}</label>
 #	
 snippet link
 	<link rel="${1:stylesheet}" href="${2}" type="text/css" media="${3:all}" />${4}
 #	
 snippet mailto
-	<a href="mailto:${1:me@example.com}?subject=${2:feedback}">${3:email me}</a>
+	<a ${1}href="mailto:${1:me@example.com}?subject=${3:feedback}">${4:email me}</a>
 #	
 snippet meta
 	<meta name="${1:name}" content="${2:content}" />${3}
@@ -384,15 +384,15 @@ snippet option
 	<option value="${1:value}">${2:$1}</option>${3}
 #	
 snippet select
-	<select name="${1:some_name}">
-		${2}
+	<select ${1}name="${2:some_name}">
+		${3}
 	</select>
 #	
-snippet table_h
-	<table border="1">${1}
+snippet tableh
+	<table${1}>
 	<thead>
 	<tr>
-		<th>#</th>
+		  <th>#</th>
 	    <th>Name</th>
 	    <th>Occupation</th>
 	    <th>User</th>
@@ -409,7 +409,7 @@ snippet table_h
 	</table>
 #	
 snippet table_v
-	<table border=1">${1}
+	<table${1}>
 	<tr>
 		<th>Header 1</th>
 		<td>data</td>
@@ -419,127 +419,127 @@ snippet table_v
 	</table>
 #	
 snippet table
-	<table>
-	${1}
+	<table${1}>
+	${2}
 	</table>
 #
 snippet th
-	<th>${1}</th>
+	<th${1}>${2}</th>
 #
 snippet tr
-	<tr>
-		${1}
+	<tr${1}>
+		${2}
 	</tr>
 #
 snippet td
-	<td>${1}</td>
+	<td${1}>${2}</td>
 #
 snippet thead
-	<thead>
-		${1}
+	<thead${1}>
+		${2}
 	</thead>
 #
 snippet tfoot
-	<tfoot>
-		${1}
+	<tfoot${1}>
+		${2}
 	</tfoot>
 #
 snippet tbody
-	<tbody>
-		${1}
+	<tbody${1}>
+		${2}
 	</tbody>
 #
 snippet textarea
-	<textarea name="${1:name}" rows="${2:8}" cols="${3:30}">${4}</textarea>
+	<textarea ${1}name="${2:name}" rows="${3:8}" cols="${4:30}">${5}</textarea>
 #
 snippet a
 	<a href="${1:#}">${2:linkname}</a>
 #
 snippet aimg
-	<a href="${1:#}">
-		<img src="${2:my-image.jpg}" alt="${2:My Image}" />
+	<a ${1}href="${2:#}">
+		<img src="${3:my-image.jpg}" alt="${4:My Image}" />
 	</a>	
 #
 snippet img
-	<img src="${1:my-image.jpg}" alt="${2:My Image}"/>
+	<img ${1}src="${2:my-image.jpg}" alt="${3:My Image}"/>
 #
 snippet i
-	<i>${1}</i>
+	<i${1}>${2}</i>
 #
 snippet b
-	<b>${1}</b>
+	<b${1}>${2}</b>
 #
 snippet strong
-	<strong>${1}</strong>
+	<strong${1}>${2}</strong>
 #
 snippet em
-	<em>${1}</em>
+	<em${1}>${2}</em>
 #
 snippet span
-	<span>${1}</span>
+	<span${1}>${2}</span>
 #
 snippet ul
-	<ul>
-		${1}
+	<ul${1}>
+		${2}
 	</ul>	
 
 snippet li
-	<li>${1}</li>
+	<li${1}>${2}</li>
 #
 snippet lia
-	<li><a href="${1:#}">${2:linkname}</a></li>
+	<li${1}><a ${2}href="${3:#}">${4:linkname}</a></li>
 #
 snippet liaimg
-	<li>
-		<a href="${1:#}">
-			<img src="${2:image.jpg}" alt="${3:my image}" />
+	<li${1}>
+		<a ${1}href="${2:#}">
+			<img src="${3:image.jpg}" alt="${4:my image}" />
 		</a>
 	</li>
 #
 snippet liimg
-	<li><img src="${1:image.jpg}" alt="${2:my image} /></li>
+	<li${1}><img src="${2:image.jpg}" alt="${3:my image} /></li>
 #
 snippet ol
-	<ol>
-		${1}
+	<ol${1}>
+		${2}
 	</ol>
 #
 snippet dl
-	<dl>
-		${1}
+	<dl${1}>
+		${2}
 	</dl>
 #
 snippet dd
-	<dd>${1}</dd>
+	<dd${1}>${2}</dd>
 #
 snippet dt
-	<dt>${1}</dt>
+	<dt${1}>${2}</dt>
 #
 snippet dda
-	<dd><a href="${1:#}">${2:linkname}</a></dd>
+	<dd${1}><a ${2}href="${3:#}">${4:linkname}</a></dd>
 #
 snippet ddaimg
-	<dd>
-		<a href="${1:#}">
-			<img src="${2:image.jpg}" alt="${3:my image}" />
+	<dd${1}>
+		<a ${2}href="${3:#}">
+			<img ${4}src="${5:image.jpg}" alt="${6:my image}" />
 		</a>
 	</dd>
 #
 snippet ddimg
-	<dd><img src="${1:image.jpg}" alt="${2:my image} /></dd>	
+	<dd${1}><img ${2}src="${3:image.jpg}" alt="${4:my image} /></dd>	
 #
 snippet dta
-	<dt><a href="${1:#}">${2:linkname}</a></dt>
+	<dt${1}><a ${2}href="${3:#}">${4:linkname}</a></dt>
 #
 snippet dtaimg
-	<dt>
-		<a href="${1:#}">
-			<img src="${2:image.jpg}" alt="${3:my image}" />
+	<dt${1}>
+		<a ${2}href="${3:#}">
+			<img src="${4:image.jpg}" alt="${5:my image}" />
 		</a>
 	</dt>
 #
 snippet dtimg
-	<dt><img src="${1:image.jpg}" alt="${2:my image} /></dt>	
+	<dt${1}><img ${2}src="${3:image.jpg}" alt="${4:my image} /></dt>	
 #
 snippet cond
 	<!--[if ${1:lt IE 9}]>
@@ -557,43 +557,43 @@ snippet cond
 #
 #
 snippet selection
-	<selection>
-		${1}
+	<selection${1}>
+		${2}
 	</selection>
 #
 snippet nav
-	<nav>
-		${1}
+	<nav${1}>
+		${2}
 	</nav>
 #
 snippet article
-	<article>
-		${1}
+	<articl${1}e>
+		${2}
 	</article>
 #
 snippet aside
-	<aside>
-		${1}
+	<aside${1}>
+		${2}
 	 </aside>
 #
 snippet hgroup
-	<hgroup>
-		${1}
+	<hgroup${1}>
+		${2}
 	</hgroup>
 #
 snippet header
-	<header>
-		${1}
+	<header${1}>
+		${2}
 	</header>
 #
 snippet footer
-	<footer>
-		${1}
+	<footer${1}>
+		${2}
 	</footer>
 #
 snippet main
-	<main>
-		${1}
+	<main${1}>
+		${2}
 	</main>
 #
 #-----------------------------------------
@@ -603,10 +603,10 @@ snippet main
 #
 #
 snippet figure
-	<figure>${1}</figure>
+	<figure${1}>${2}</figure>
 #
 snippet figcaption
-	<figcaption>${1}</figcaption>
+	<figcaption${1}>${2}</figcaption>
 ### attr class	
 #
 #
@@ -617,25 +617,25 @@ snippet figcaption
 #
 #
 snippet data
-	<data value=${1}>${2}</data>
+	<data ${1}value=${2}>${3}</data>
 #
 snippet time
-	<time datetime="${1:2010-07-20}">${1:Jul 20}</time>
+	<time ${1}datetime="${2:2010-07-20}">${3:Jul 20}</time>
 #
 snippet mark
-	<mark>${1}</mark>
+	<mark${1}>${2}</mark>
 #
 snippet ruby
-	<ruby>${1}</ruby>
+	<ruby${1}>${2}</ruby>
 #
 snippet rp
-	<rp>${1}</rp>
+	<rp${1}>${2}</rp>
 #
 snippet bdi
-	<bdi>${1}</bdi>
+	<bdi${1}>${2}</bdi>
 #
 snippet wbr
-	<wbr>${1}</wbr>
+	<wbr${1}>${2}</wbr>
 #
 #
 #-----------------------------------------
@@ -644,31 +644,31 @@ snippet wbr
 #
 #
 #
-snippet video
+snippet video autoplay
 	<video src="${1:videofile.ogg}" autoplay poster="${2:posterimage.jpg}">
 	  	${3:Sorry, your browser doesn't support embedded videos, but don't worry, you can} 
 	  	${4:<a href="videofile.ogg">download it</a>}
 	    ${5: and watch it with your favorite video player!}
 	</video>
 #
-snippet video2
+snippet video track
 	<video src="${1:foo.ogg}">
 	  <track kind="${2:subtitles}" src="${3:foo.en.vtt}" srclang="${4:en}" label="${5:English}">
 	  <track kind="${6:subtitles}" src="${7:foo.pt.vtt}" srclang="${8:pt} label="${9:Portuguese}">
 	</video>
 #
-snippet audio
+snippet audio autoplay
 	<audio src="${1:audio.ogg}" autoplay>
 	 	${2:Your browser does not support the <code>audio</code> element.} 
 	</audio>
 #
-snippet audio2
+snippet audio track
 	<audio src="${1:foo.ogg}">
 	  <track kind="${2:captions}" src="${3:foo.pt.vtt}" srclang="${3:pt}" label="${4:Portuguese}">
 	  <track kind="${5:captions}" src="${6:foo.en.vtt}" srclang="${7:en}" label="${8:English}">
 	</audio>
 #
-snippet audio3
+snippet audio controls
 	<audio controls="${1:controls}">
 	 ${2:Your browser does not support the <code>audio</code> element.} 
 	  <source src="${3:foo.wav}" type="${4:audio/wav}">
@@ -696,13 +696,13 @@ snippet track
 	</video>
 #
 snippet canvas
-	<canvas id="${1:canvas}" width="${2:300}" height="${3:300}">
-	 ${4:Sorry, your browser doesn't support the 'canvas' element.} 
+	<canvas ${1}id="${2:canvas}" width="${3:300}" height="${4:300}">
+	 ${5:Sorry, your browser doesn't support the 'canvas' element.} 
 	</canvas>
 #
 snippet svg
-	<svg width="${1:150}" height="${2:100}" viewBox="${3:0 0 3 2}">
-		<rect width="${4:1}" height="${5:2}" x="${6:0}" fill="${7:#008d46}" />
+	<svg ${1}width="${2:150}" height="${3:100}" viewBox="${4:0 0 3 2}">
+		<rect width="${5:1}" height="${6:2}" x="${7:0}" fill="${8:#008d46}" />
 	</svg>
 #
 #
@@ -713,30 +713,29 @@ snippet svg
 #
 #
 snippet datalist
-	<input list="${1:football}" />
-	<datalist id="${2:$1}">
-		<option value="${3:Gremio}">
-		<option value="${4:Inter}">
-		<option value="${5:Juventude}">
+	<input ${1}list="${2:football}" />
+	<datalist id="${3:$1}">
+		<option value="${4:Gremio}">
+		<option value="${5:Inter}">
+		<option value="${6:Juventude}">
 	</datalist>
 #
 snippet keygen
-	<keygen name="${1:name}" challenge="${2:challenge string}" keytype="type" keyparams="${3:pqg-params}">
+	<keygen ${1}name="${2:name}" challenge="${3:challenge string}" keytype="type" keyparams="${4:pqg-params}">
 #
 snippet output
-	<form oninput="${1:result}.value=parseInt(${2:a}.value)+parseInt(${3:b}.value)">
-		<input type="range" name="${4:$3}" value="${5:50}" /> +
-		<input type="number" name="${6:2}" value="${7:10}" /> =
-		<output name="${8:$1}"></output>
+	<form ${1}oninput="${2:result}.value=parseInt(${3:a}.value)+parseInt(${4:b}.value)">
+		<input type="range" name="${5:$3}" value="${6:50}" /> +
+		<input type="number" name="${7:2}" value="${8:10}" /> =
+		<output name="${9:$1}"></output>
 	</form>
 #
 snippet progress
-	<progress value="${1:70}" max="${2:100}">${3:70 %}</progress>
+	<progress ${1}value="${2:70}" max="${3:100}">${4:70 %}</progress>
 #
 snippet meter
-	<meter min="${1:200}" max="${2:500}" value="${3:350}">${4:350 degrees}</meter>
+	<meter ${1}min="${2:200}" max="${3:500}" value="${4:350}">${5:350 degrees}</meter>
 #
-	<meter id="${1}" min="${2:200}" max="${3:500}" value="${4:350}">${5:350 degrees}</meter>
 #-----------------------------------------
 ### | Interactive elements
 #-----------------------------------------
@@ -744,20 +743,20 @@ snippet meter
 #
 #
 snippet details
-	<details>
-		<summary>${1:Some details}</summary>
-		${2:<p>More info about the details.</p>}	
+	<details${1}>
+		<summary${2}>${3:Some details}</summary>
+		${4:<p>More info about the details.</p>}	
 	</details>
 #
 snippet summary
-	<summary>${1:Some details}</summary>
+	<summary${1}>${2:Some details}</summary>
 #
 snippet menuitem
-	<menuitem type="command" label="${1:save}" icon="${2#cons/save.png}" onclick="${3:save()}">
+	<menuitem ${1}type="command" label="${2:save}" icon="${3:public/img/save.png}" onclick="${4:save()}">
 #
 snippet menu
-	<menu>
-		${1}
+	<menu${1}>
+		${2}
 	</menu>
 #
 #
