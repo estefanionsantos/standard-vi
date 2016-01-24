@@ -1,7 +1,6 @@
 " File:          snipMate.vim
 " Author:        Michael Sanders
-" Last Updated:  July 13, 2009
-" Version:       0.83
+" Version:       0.84
 " Description:   snipMate.vim implements some of TextMate's snippets features in
 "                Vim. A snippet is a piece of often-typed text that you can
 "                insert into your document using a trigger word followed by a "<tab>".
@@ -14,33 +13,16 @@ if exists('loaded_snips') || &cp || version < 700
 	finish
 endif
 let loaded_snips = 1
-if !exists('snips_author') | let snips_author = 'Estefanio NS <estefanions@gmail.com' | endif
-if !exists('snips_copyright_author') | let snips_copyright_author = '@estefanions' | endif
-
+if !exists('snips_author') | let snips_author = 'Me' | endif
 
 au BufRead,BufNewFile *.snippets\= set ft=snippet
 au FileType snippet setl noet fdm=indent
 
 let s:snippets = {} | let s:multi_snips = {}
-fun! Filename()
-    let filename = expand('%:t:r')
-    if filename == '' | return a:0 == 2 ? a:2 : '' | endif
-    return !a:0 || a:1 == '' ? filename : substitute(a:1, '$1', filename, 'g')
-    endf
+
 if !exists('snippets_dir')
 	let snippets_dir = substitute(globpath(&rtp, 'snippets/'), "\n", ',', 'g')
 endif
-
-
-"----------------------------"
-"
-fun! Dirname()
-    let filename = expand('%:t:r')
-    if filename == '' | return a:0 == 2 ? a:2 : '' | endif
-    return a:dir 
-
-    endf
-"----------------------------------
 
 fun! MakeSnip(scope, trigger, content, ...)
 	let multisnip = a:0 && a:1 != ''
@@ -109,8 +91,33 @@ fun! ExtractSnipsFile(file, ft)
 	endfor
 endf
 
-fun! ResetSnippets()
+" Reset snippets for filetype.
+fun! ResetSnippets(ft)
+	let ft = a:ft == '' ? '_' : a:ft
+	for dict in [s:snippets, s:multi_snips, g:did_ft]
+		if has_key(dict, ft)
+			unlet dict[ft]
+		endif
+	endfor
+endf
+
+" Reset snippets for all filetypes.
+fun! ResetAllSnippets()
 	let s:snippets = {} | let s:multi_snips = {} | let g:did_ft = {}
+endf
+
+" Reload snippets for filetype.
+fun! ReloadSnippets(ft)
+	let ft = a:ft == '' ? '_' : a:ft
+	call ResetSnippets(ft)
+	call GetSnippets(g:snippets_dir, ft)
+endf
+
+" Reload snippets for all filetypes.
+fun! ReloadAllSnippets()
+	for ft in keys(g:did_ft)
+		call ReloadSnippets(ft)
+	endfor
 endf
 
 let g:did_ft = {}
@@ -165,7 +172,7 @@ fun! TriggerSnippet()
 		" the snippet.
 		if snippet != ''
 			let col = col('.') - len(trigger)
-			sil exe 's/\V'.escape(trigger, '/.').'\%#//'
+			sil exe 's/\V'.escape(trigger, '/\.').'\%#//'
 			return snipMate#expandSnip(snippet, col)
 		endif
 	endfor
@@ -262,4 +269,3 @@ fun! ShowAvailableSnips()
 	return ''
 endf
 " vim:noet:sw=4:ts=4:ft=vim
-
