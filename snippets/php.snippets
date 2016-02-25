@@ -360,6 +360,18 @@ snippet vpri
 snippet vpro
 	protected $${1:name};
 	${2}
+#
+snippet p:
+	parent::${1}
+#
+snippet s:
+	self::${1}
+#
+snippet $t 
+	$this->${1}
+#	parent::_construct(); 
+snippet p__
+	parent::__construct(${1});
 # [m]ethod _[c]onstruct
 snippet m__
 	${1:public} function __construct(${2})
