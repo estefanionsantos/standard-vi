@@ -250,7 +250,7 @@ set sm              " shows the beginning of a new closed block {},[], () (set s
 set nu              " numbered lines (set number)
 set is              " increases search (set incrementedsearch)
 set hls             " Highlight search (set higlightedsearch)
-set ignorecase      " ignores case sensitive (set ignorecase)
+"set ignorecase      " ignores case sensitive (set ignorecase)
 set scs             " considers uppercase of lowercase (set smartcase )
 set hidden          " Hide buffers when they are abandoned
 set nobackup        " no backup
@@ -260,6 +260,7 @@ set mouse=a         " Enable mouse usage (all modes)
 set background=dark " background
 set showcmd         " Show (partial) command in status line.
 set ruler           " ruler
+set linebreak       " does not share the word EOL
 "set lisp            " autocomplete with dash '-'
 "set isk+=-  " -
 "set autowrite      " Automatically save before commands like :next and :make
