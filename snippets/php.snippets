@@ -326,8 +326,50 @@ snippet docf
 	${4}
 
 
+#
+#
+# function anonymous
+snippet functiona
+	function (${1}) {
 
+		${2}
 
+	}
+#
+#
+# variavel function anonymous inherit
+snippet functionau
+	function (${2}) use (${3:inherit}) {
+
+		${4}
+
+	}
+
+#
+#
+#
+# function anonymous
+snippet functionva
+	$${1:var} = function (${2}) {
+
+		${3}
+
+	};
+
+#
+#
+# variavel function anonymous inherit
+snippet functionvau  
+	$${1:var} = function (${2}) use (${3:inherit}) {
+
+		${4}
+
+	};
+
+#
+#
+#
+#
 snippet exit
 	exit(${1});
 # function	
