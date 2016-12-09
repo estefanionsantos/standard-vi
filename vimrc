@@ -245,6 +245,8 @@ cab hlclear let @/=''
 " Highlight word under the cursor
 cab hlword let @/="<C-r><C-w>"
 
+cab strip_tags %s#<[^>]\+>##g
+
 set ai              " auto-identacao (set autoindent)
 set ci              " gira em torno de C recuo stilo (set cindent)
 set shiftwidth=4    " creates 4 spaces in the tab
