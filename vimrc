@@ -156,7 +156,6 @@ inoremap " ""<left>
 nmap <F12> :!ctags -R --PHP-kinds=+cf .<cr>
 nmap <F4> :!ctags -R --fields=+aimS --languages=php .<CR>
 
-map <F10> :w!<cr>
 noremap <leader>w :w!<cr>
 noremap <leader>W :wa!<cr>
 
@@ -228,9 +227,7 @@ cab nerdTree NERDTreeToggle|cab NERDTREE NERDTreeToggle
 cab nerdtree NERDTreeToggle
 cab ntreeo NERDTree|cab ntreec NERDTreeClose
 cab ntreeopen NERDTree|cab ntreeclose NERDTreeClose
-map <leader>nt :NERDTreeToggle<CR>
-"inoremap <leader>nt <c-o>:NERDTreeToggle<CR>
-
+map <F3> :NERDTreeToggle<CR>
 " 
 " -------------------------------------------------
 "
