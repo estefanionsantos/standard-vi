@@ -14,6 +14,7 @@ iab iinm Estefanio NS <estefanions@gmail.com>
 iab iifn Estefanio Nunes dos Santos
 iab iim estefanions@gmail.com
 iab iiws http://estefanio.com.br
+
  
 
 "set foldmethod=indent
@@ -207,7 +208,7 @@ map <A-F10> :b20<cr>
 map <A-F11> :b21<cr>
 map <A-F12> :b22<cr>
 map <C-Q> :bwipeout<cr>
-map <F5> :buffers<cr>
+"map <F5> :buffers<cr>
 
 cab W w|cab Q q|cab B b
 cab LS ls|cab Ls ls|cab lS ls
@@ -227,10 +228,9 @@ cab nerdTree NERDTreeToggle|cab NERDTREE NERDTreeToggle
 cab nerdtree NERDTreeToggle
 cab ntreeo NERDTree|cab ntreec NERDTreeClose
 cab ntreeopen NERDTree|cab ntreeclose NERDTreeClose
-map <F3> :NERDTreeToggle<CR>
-" 
-" -------------------------------------------------
-"
+map <C-n> :NERDTreeToggle<CR>
+
+" ------------------------------------------------- "
 
 
 " TComment
@@ -274,4 +274,5 @@ set linebreak       " does not share the word EOL
 set cul
 hi cursorline cterm=NONE ctermbg=black guibg=dargray
 
-             
+
+
