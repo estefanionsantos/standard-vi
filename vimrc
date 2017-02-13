@@ -265,7 +265,8 @@ set background=dark " background
 set showcmd         " Show (partial) command in status line.
 set ruler           " ruler
 set linebreak       " does not share the word EOL
-"set lisp            " autocomplete with dash '-'
+set visualbell      " disable beep
+"set lisp           " autocomplete with dash '-'
 "set isk+=-  " -
 "set autowrite      " Automatically save before commands like :next and :make
 
