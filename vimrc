@@ -161,6 +161,9 @@ let g:phpcomplete_remove_constant_extensions = ['xslt_php_4']
 map ,w :w!<cr>
 map ,W :wa!<cr>
 
+noremap <leader>w :wa!<cr>
+inoremap <leader>w <c-o>:wa!<cr>
+
 
 
 
