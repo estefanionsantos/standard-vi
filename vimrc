@@ -140,7 +140,8 @@ inoremap ` ``<left>
 " ctags PHP
 " -------------------------------------------------
 "
-nmap <F4> :!ctags -R --PHP-kinds=+cf --fields=+aimS --languages=php .<CR>
+nmap <F4> :!ctags -R --recurse=yes --tag-relative=yes --exclude=.git --exclude=*.vim --PHP-kinds=+cfi --fields=+aimS --languages=php .<CR>
+
 
 let php_sql_query=1
 let php_htmlInStrings=1
@@ -161,8 +162,11 @@ let g:phpcomplete_remove_constant_extensions = ['xslt_php_4']
 map ,w :w!<cr>
 map ,W :wa!<cr>
 
-noremap <leader>w :wa!<cr>
-inoremap <leader>w <c-o>:wa!<cr>
+noremap <leader>w :w!<cr>
+noremap <leader>W :wa!<cr>
+
+inoremap <leader>w <c-o>:w!<cr>
+inoremap <leader>W <c-o>:wa!<cr>
 
 
 

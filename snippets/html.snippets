@@ -205,12 +205,7 @@ snippet htmlf
 				<title>${3:`Filename()`}</title>
 	    </head>
 	<body>
-
 		${4}
-
-	<!--[if lt IE 9]>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-	<![endif]-->
 	</body>
 	</html>
 #
@@ -300,13 +295,8 @@ snippet legend
 	<legend>${1}</legend>
 #	
 snippet form
-	<form action="${1}" method="${2:post}">
-		${3}
-	</form>
-#	
-snippet form_multpart
-	<form action="${1}" method="${2:post}" enctype="multipart/form-data">
-		${3}
+	<form action="${1}" method="${2:post}" enctype="${3:multipart/form-data}">
+		${4}
 	</form>
 #	
 snippet h1
