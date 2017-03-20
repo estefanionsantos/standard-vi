@@ -221,10 +221,11 @@ map <C-n> :NERDTreeToggle<CR>
 cab tcomment TComment
 
 "learing the buffer search 
-cab hlclear let @/=''
+noremap <leader>hc :let @/=''<cr>
 
 " Highlight word under the cursor
-cab hlword let @/="<C-r><C-w>"
+noremap <leader>hw :let @/="<C-r><C-w>"<cr>
+
 
 cab strip_tags %s#<[^>]\+>##g
 
