@@ -118,30 +118,15 @@ snippet doctype XHTML 1.0 Transitional
 #
 snippet doctype XHTML 1.1
 	<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-#tag geral
+#
 snippet tt
-	<${1:*}>${3}</$1>
-# tag class
-snippet tt.
-	<${1:*} class="${2}">${3}</$1>
-# tag id
-snippet tt#
-	<${1:*} id="${2}">${3}</$1>
-# tag style
-snippet tts
-	<${1:*} style="${2}">${3}</$1>
+	<${1:*}>${2}</$1>
+#
+snippet tta
+	<${1:*} ${2:*}>${3}</$1>
 # tag open
 snippet tto
 	<${1:*}>
-# tag class
-snippet tto.
-	<${1:*} class="${2}">
-# tag id
-snippet tto#
-	<${1:*} id="${2}">
-# tag style
-snippet ttos
-	<${1:*} style="${2}">
 # tag close
 snippet ttc
 	</${1:*}>
