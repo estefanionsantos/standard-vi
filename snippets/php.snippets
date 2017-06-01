@@ -75,7 +75,7 @@ snippet var_dump
 #
 #
 #
-# retorna print_r() ou var_dump()
+# retorna print_r()
 snippet pr 
 	echo '<pre>';
 	print_r(${1:$array});
@@ -83,6 +83,7 @@ snippet pr
 #
 #
 #
+# retorna var_dump()
 snippet vd
 	echo '<pre>';
 	var_dump(${1});
@@ -124,9 +125,9 @@ snippet try
 
 		${1}
 
-	} catch (${2:Exception $e}) {
+	} catch (${2:\}${3:Exception $e}) {
 
-		throw new ${3:Exception}(${4:$e});
+		throw new ${2}${4:Exception}(${5:$e});
 
 	}
 
@@ -445,10 +446,10 @@ snippet ms
 #---------
 # [m]ethod [i]nterface
 snippet mi
-	public function ${1:nameMethod}(${2});
+	${1:public} function ${2:nameMethod}(${3});
 # [m]ethod [a]bstract
 snippet ma
-	protected abstract function ${1:nameMethod}(${2});
+	${1:protected} abstract function ${2:nameMethod}(${3});
 # [m]ethod [g]ets [s]ets	
 snippet mgs
 	public function get${1:Name}()
