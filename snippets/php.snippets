@@ -644,15 +644,36 @@ snippet def?
 snippet defined
 	${1}defined('${2}')${3}
 #
-snippet wh
-	while (${1:TRUE})
-	{
-		${2:// statement}
-	}
 #
-snippet ?wh
+snippet phpfor
+	<?php for ($${1:i} = ${2:0}; $$1 ${3:<} ${4:count}; $$1${5:++}) { ?>
+		${6}
+	<?php } ?>	
+#
+snippet phpforeach
+	<?php foreach ($${1:list} as $${2:row}) { ?>
+		${3}
+	<?php } ?>
+snippet phpwhile
 	<php while (${1:TRUE}) { ?>
 				${2}
+	<?php } ?>
+#
+snippet phpdo
+	<?php do { ?>
+		${2}
+	<?php } while (${1:TRUE}); ?>
+#
+snippet phpif
+	<?php if (${1:TRUE}) { ?>
+		${2}
+	<?php } ?>
+#
+snippet phpife
+	<?php if (${1:TRUE}) { ?>
+		${2}
+	<?php }else{ ?>
+		${3}
 	<?php } ?>
 #
 # do ... while
@@ -663,21 +684,11 @@ snippet do
 	}
 	while (${1:TRUE});
 #
-snippet ?do
-	<?php do { ?>
-		${2}
-	<?php } while (${1:TRUE}); ?>
-#
 snippet if
 	if (${1:TRUE})
 	{
 		${2}
 	}
-#
-snippet ?if
-	<?php if (${1:TRUE}) { ?>
-		${2}
-	<?php } ?>
 #
 snippet ife
 	if (${1})
@@ -734,13 +745,6 @@ snippet foreach
 	{
 		${3}
 	}
-
-#
-snippet ?foreach
-	<?php foreach ($${1:list} as $${2:row}) { ?>
-		${3}
-	<?php } ?>
-
 #
 # while	
 snippet while
