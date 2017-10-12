@@ -71,6 +71,7 @@ let g:acp_enableAtStartup = 0 " auto popup 0|1
 
 inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
 inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+inoremap <Leader>i <C-O>:call DoIt()<CR>
 
 
 noremap <up> <nop>
