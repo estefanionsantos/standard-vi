@@ -1,6 +1,6 @@
     " https://github.com/ddelnano/implement.vim
 
-function! DoIt()
+function! PhpImplement()
     " move to the first component
     " Foo\Bar => move to the F
     call search('[[:alnum:]\\_]\+', 'bcW')
