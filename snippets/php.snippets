@@ -375,8 +375,7 @@ snippet exit
 	exit(${1});
 # function	
 snippet function
-	if(!function_exists('${1:nameFunction}')) 
-	{
+	if (!function_exists('${1:nameFunction}')) {
 		function $1(${2})
 		{
 			${3}
@@ -573,8 +572,7 @@ snippet ns2
 	}
 # namespace
 snippet namespace2
-	namespace ${1:Project}
-	{
+	namespace ${1:Project} {
 		${2}	
 	}
 #	
@@ -678,38 +676,32 @@ snippet phpife
 #
 # do ... while
 snippet do
-	do
-	{
+	do {
+
 		${2}
-	}
-	while (${1:TRUE});
+
+	} while (${1:TRUE});
 #
 snippet if
-	if (${1:TRUE})
-	{
+	if (${1:TRUE}) {
 		${2}
 	}
 #
 snippet ife
-	if (${1})
-	{
+	if (${1}) {
 		${2}
-	}
-	else
-	{
+	} else {
 		${3}
 	}
 	${4}
 #
 snippet else
-	else
-	{
+	else {
 		${1}
 	}
 #
 snippet elseif
-	elseif (${1:TRUE})
-	{
+	elseif (${1:TRUE}) {
 		${2}
 	}
 #
@@ -718,8 +710,7 @@ snippet t
 	$${1:retVal} = (${2:TRUE}) ? ${3:a} : ${4:b};${5}
 #
 snippet switch
-	switch ($${1:variable})
-	{
+	switch ($${1:variable}) {
 		case ${2:value}:
 			${3:// statement}
 			break;
@@ -735,21 +726,18 @@ snippet case
 		break;${3}
 #
 snippet for
-	for ($${1:i} = ${2:0}; $$1 ${3:<} ${4:count}; $$1${5:++})
-	{
+	for ($${1:i} = ${2:0}; $$1 ${3:<} ${4:count}; $$1${5:++}) {
 		${6}
 	}	
 #
 snippet foreach
-	foreach ($${1:list} as $${2:row})
-	{
+	foreach ($${1:list} as $${2:row}) {
 		${3}
 	}
 #
 # while	
 snippet while
-	while (${1:TRUE})
-	{
+	while (${1:TRUE}) {
 		${2}
 	}
 	
@@ -757,8 +745,7 @@ snippet while
 snippet arr
 	 array(${1});
 snippet arr_
-	 array
-	 (
+	 array (
 				${1}
 	 );
 #
