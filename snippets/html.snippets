@@ -119,27 +119,27 @@ snippet doctype XHTML 1.0 Transitional
 snippet doctype XHTML 1.1
 	<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 #
-snippet tt
-	<${1:*}>${2}</$1>
+snippet div
+	<${1:div}>${2}</$1>
 #
-snippet tta
-	<${1:*} ${2:*}>${3}</$1>
+snippet diva
+	<${1:div} ${2:*}>${3}</$1>
 # tag open
-snippet tto
-	<${1:*}>
+snippet divo
+	<${1:div}>
 # tag close
-snippet ttc
-	</${1:*}>
+snippet divc
+	</${1:div}>
 # tag auto close
-snippet ttcc
-	<${1:*} />
+snippet divcc
+	<${1:div} />
 #
-snippet ttn
-	<${1:*}>
+snippet divn
+	<${1:div}>
 	    ${2}
 	</$1>
 #
-snippet ttan
+snippet divan
 	<${1:*} ${2:*}>
 	    ${3}
 	</$1>
@@ -243,9 +243,6 @@ snippet base
 #	
 snippet br
 	<br />
-#	
-snippet div
-	<div>${1}</div>
 #	
 # Embed QT Movie
 snippet movie
