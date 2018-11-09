@@ -253,7 +253,7 @@ set visualbell      " disable beep
 
 
 set cul
-hi cursorline cterm=NONE ctermbg=black guibg=dargray
+hi cursorline cterm=NONE ctermbg=black guibg=black
 
 
 
