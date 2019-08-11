@@ -77,6 +77,11 @@ noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
 
 "autocmd BufRead *.* norm zR
 
@@ -251,9 +256,5 @@ set linebreak       " does not share the word EOL
 set visualbell      " disable beep
 
 
-
 set cul
-hi cursorline cterm=NONE ctermbg=black guibg=black
-
-
-
+hi cursorline cterm=NONE ctermbg=black guibg=lightgrey
