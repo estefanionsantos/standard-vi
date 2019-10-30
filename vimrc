@@ -82,7 +82,6 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 
-
 "autocmd BufRead *.* norm zR
 
 set completeopt=longest,menuone
@@ -126,12 +125,33 @@ autocmd BufRead,BufNewFile,BufReadPost *.twig set filetype=twig.html
 endif
 
 
+inoremap '' ''
+inoremap `` ``
+inoremap "" ""
+inoremap () ()
+inoremap [] []
+inoremap {} {}
+
 inoremap ( ()<left>
 inoremap { {}<left>
 inoremap [ []<left>
 inoremap ' ''<left>
 inoremap " ""<left>
 inoremap ` ``<left>
+
+inoremap '; '';<left><left>
+inoremap `; ``;<left><left>
+inoremap "; "";<left><left>
+inoremap (; ();<left><left>
+inoremap [; [];<left><left>
+inoremap {; {};<left><left>
+
+inoremap ', '',<left><left>
+inoremap `, ``,<left><left>
+inoremap ", "",<left><left>
+inoremap (, (),<left><left>
+inoremap [, [],<left><left>
+inoremap {, {};<left><left>
 
 
 
@@ -249,12 +269,17 @@ set nobackup        " no backup
 set noswapfile      " no swap file
 set nowritebackup   " no write backup
 set mouse=a         " Enable mouse usage (all modes)
-set background=dark " background
 set showcmd         " Show (partial) command in status line.
 set ruler           " ruler
 set linebreak       " does not share the word EOL
 set visualbell      " disable beep
+"set background=dark " background
+
 
 
 set cul
 hi cursorline cterm=NONE ctermbg=black guibg=lightgrey
+
+
+
+
