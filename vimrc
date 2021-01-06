@@ -236,7 +236,7 @@ cab nerdTree NERDTreeToggle|cab NERDTREE NERDTreeToggle
 cab nerdtree NERDTreeToggle
 cab ntreeo NERDTree|cab ntreec NERDTreeClose
 cab ntreeopen NERDTree|cab ntreeclose NERDTreeClose
-map <leader> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
 
 " ------------------------------------------------- "
 
