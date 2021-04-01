@@ -134,6 +134,27 @@ snippet try
 ### throw new Exceptio(...)
 snippet throw
 	throw new ${1:Exception}(${2});
+## try{...}catch(...){..}
+snippet conn
+	try {
+		$dsn      = 'mysql:host=${1:127.0.0.1};dbname=${2:db_name}';
+		$user     = '${3:user}';
+		$password = '${4:password}';
+		$options  = NULL;
+
+		$conn = new PDO($dsn, $user, $password, $options);
+		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+
+	} catch (PDOException $e) {
+		throw new Exception($e->getMessage());
+	}
+
+#
+#
+#
+
+
+	
 ####
 # modified
 snippet class 
