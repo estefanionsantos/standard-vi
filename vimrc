@@ -273,6 +273,7 @@ set showcmd         " Show (partial) command in status line.
 set ruler           " ruler
 set linebreak       " does not share the word EOL
 set visualbell      " disable beep
+set path+=**        " find files with :find myfile.txt
 "set background=dark " background
 
 
