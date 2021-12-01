@@ -123,6 +123,13 @@ inoremap (, (),<left><left>
 inoremap [, [],<left><left>
 inoremap {, {};<left><left>
 
+inoremap (<CR> (<CR>)<ESC>O<TAB>
+inoremap (;<CR> (<CR>);<ESC>O<TAB>
+inoremap [<CR> [<CR>]<ESC>O<TAB>
+inoremap [;<CR> [<CR>];<ESC>O<TAB>
+inoremap {<CR> {<CR>}<ESC>O<TAB>
+inoremap {;<CR> {<CR>};<ESC>O<TAB>
+
 " ---------------------------------------- 
 " ctags PHP
 " ---------------------------------------- 
