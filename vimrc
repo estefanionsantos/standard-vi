@@ -177,7 +177,7 @@ cab LS ls|cab Ls ls|cab lS ls
 cab PWD pwd|cab Pwd pwd
 cab Wq wq|cab wQ wq|cab WQ wq|cab Wa wa|cab WA wa|cab wA wa
 cab WALL wall|cab Wall wall|cab wALL wall
-cab QALL qall|cab Qall qall|cab qALL qall
+cab QALL qall|cab Qall qall|cab qALL qall|cab QA qa|cab qA qa
 cab WQALL wqall|cab wQALL wqall|cab Wqall wqall
 cab BN bn|cab Bn bn|cab bN bn
 cab BD bd|cab Bd bd|cab bD bd
