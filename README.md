@@ -1,1 +1,1 @@
-# vimconfig
+# Standard VI Plugin
