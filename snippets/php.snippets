@@ -632,6 +632,13 @@ snippet phpife
 		        ${3}
 	<?php } ?>
 #
+snippet phpifelse
+	<?php if (${1:true}) { ?>
+		        ${2}
+	<?php } else { ?>
+		        ${3}
+	<?php } ?>
+#
 # do ... while
 snippet do
 	do {
@@ -644,6 +651,13 @@ snippet if
 	}
 #
 snippet ife
+	if (${1}) {
+	    ${2}
+	} else {
+	    ${3}
+	}
+#
+snippet ifelse
 	if (${1}) {
 	    ${2}
 	} else {
