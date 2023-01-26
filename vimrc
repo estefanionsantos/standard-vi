@@ -21,7 +21,6 @@ autocmd FileType hpp        setlocal omnifunc=omni#cpp#complete#Main
 autocmd FileType ruby       setlocal omnifunc=rubycomplete#Complete
 
 " build tags of your own project with Ctrl-F12
-map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 map ,u :source /etc/vim/vimrc<CR>:echo " Done! vimrc file reloaded!"<CR>
 
 " set the names of flags
@@ -134,10 +133,14 @@ inoremap {;<CR> {<CR>};<ESC>O<TAB>
 " ctags PHP
 " ---------------------------------------- 
 "
-nmap <F4> :!ctags -R 
+" map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+noremap <leader>4 :!ctags -R 
             \--recurse=yes --tag-relative=yes 
             \--exclude=.git --exclude=*.vim 
-            \--PHP-kinds=+cfi --fields=+aimS 
+            \--PHP-kinds=+cfi --fields=+aimlS 
+            \--exclude=composer.phar 
+            \--exclude=*Test.php 
+            \--exclude=*phpunit* 
             \--languages=php .<CR>
 
 let php_sql_query=1
