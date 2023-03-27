@@ -134,15 +134,29 @@ snippet ve;
 #
 # error_reporting()	
 snippet err_reporting
-		error_reporting(E_ALL);
+		ini_set('display_errors', 1);
+		ini_set('display_startup_erros', 1);
 		ini_set('error_reporting', E_ALL);
+		error_reporting(E_ALL);
+
 #
 #
 #
 # error_reporting()	
 snippet err
-		error_reporting(E_ALL);
+		ini_set('display_errors', 1);
+		ini_set('display_startup_erros', 1);
 		ini_set('error_reporting', E_ALL);
+		error_reporting(E_ALL);
+#
+#
+#
+# error_reporting(0)	
+snippet err0
+		ini_set('display_errors', 0);
+		ini_set('display_startup_erros', 0);
+		ini_set('error_reporting', 0);
+		error_reporting(0);
 #
 #
 #
