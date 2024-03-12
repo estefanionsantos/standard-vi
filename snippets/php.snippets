@@ -100,11 +100,29 @@ snippet pr
 #
 #
 #
+# retorna print_r(); exit();
+snippet epr
+	echo '<pre>';
+	print_r(${1:$array});
+	echo '</pre>';
+	exit();
+#
+#
+#
 # retorna var_dump()
 snippet vd
 	echo '<pre>';
 	var_dump(${1});
 	echo '</pre>';
+#
+#
+#
+# retorna var_dump(); exit()
+snippet evd
+	echo '<pre>';
+	var_dump(${1});
+	echo '</pre>';
+	exit();
 #
 #
 #
